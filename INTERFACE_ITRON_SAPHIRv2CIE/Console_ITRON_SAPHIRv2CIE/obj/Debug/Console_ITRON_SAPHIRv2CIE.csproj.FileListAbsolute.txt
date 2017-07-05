@@ -1,0 +1,37 @@
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\Console_ITRON_SAPHIRv2CIE.exe.config
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\Console_ITRON_SAPHIRv2CIE.exe
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\Console_ITRON_SAPHIRv2CIE.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.Common.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.ProcessUI.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\INOVA.ISF.DATACESS.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.BusinessRules.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.DTO.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\log4net.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ISF.DEPLOIEMENT.COMMON.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.Common.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.ProcessUI.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.BusinessRules.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.DTO.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\obj\Debug\Console_ITRON_SAPHIRv2CIE.csprojResolveAssemblyReference.cache
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\obj\Debug\Console_ITRON_SAPHIRv2CIE.exe
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\obj\Debug\Console_ITRON_SAPHIRv2CIE.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\Console_ITRON_SAPHIRv2CIE.exe.config
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\Console_ITRON_SAPHIRv2CIE.exe
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\Console_ITRON_SAPHIRv2CIE.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.ProcessUI.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\INOVA.ISF.DATACESS.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.BusinessRules.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.DTO.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ISF.DEPLOIEMENT.COMMON.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.Common.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\ACEVISION.ProcessUI.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.BusinessRules.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.DTO.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\obj\Debug\Console_ITRON_SAPHIRv2CIE.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\obj\Debug\Console_ITRON_SAPHIRv2CIE.exe
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\Console_ITRON_SAPHIRv2CIE\obj\Debug\Console_ITRON_SAPHIRv2CIE.pdb

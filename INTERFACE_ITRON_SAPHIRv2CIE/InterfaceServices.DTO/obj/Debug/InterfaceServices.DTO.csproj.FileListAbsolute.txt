@@ -1,0 +1,15 @@
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Debug\InterfaceServices.DTO.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Debug\InterfaceServices.DTO.pdb
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Debug\InterfaceServices.DTO.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Debug\InterfaceServices.DTO.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.csprojResolveAssemblyReference.cache
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Debug\InterfaceServices.DTO.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Debug\InterfaceServices.DTO.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Debug\InterfaceServices.DTO.pdb

@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Interface SAPHIR - ACE VISION</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+        
+        <meta name="viewport" content="width=device-width" />
+
+        
+
+        @*<link href="@Url.Content("~/Content/dataTables/demo_table.css")" rel="stylesheet" type="text/css" />*@
+     @*   <link href="@Url.Content("~/Content/dataTables/demo_page.css")" rel="stylesheet" type="text/css" />*@
+       @*<link href="@Url.Content("~/Content/dataTables/demo_table_jui.css")" rel="stylesheet" type="text/css" />*@
+
+        @Styles.Render("~/Content/css")
+        <link href="~/Content/Site.css" rel="stylesheet" />
+          
+        
+
+        <!--date-->
+       @* <script src="~/Scripts/Gle/moment.js"></script>*@
+
+        <link href="~/Content/CSS/Menu/menu.css" rel="stylesheet" />
+
+        @Scripts.Render("~/bundles/modernizr")
+        
+      
+        <script src="~/Scripts/DataTable/jquery-1.11.3.min.js"></script>
+        <script src="~/Scripts/BootStrap/bootstrap.min.js"></script>
+        <script src="~/Scripts/Gle/html5.js"></script>
+
+          <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+        <!---->
+        <link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/CSS/Menu/WidgetLogin.css" rel="stylesheet" />
+        <script src="~/Scripts/BootStrap/lumino.glyphs.js"></script>
+
+        <link href="~/Content/CSS/DatePicker/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+        <script src="~/Scripts/Gle/jquery-ui.custom.js"></script>
+        <script src="~/Scripts/Gle/jquery.js"></script>
+        <script src="~/Scripts/Gle/modernizr.js"></script>
+        <script>
+            Modernizr.load({
+                test: Modernizr.inputtypes.date,
+                nope: "/Scripts/Gle/jquery-ui.custom.js",
+                callback: function () {
+                    $("input[type=date]").datepicker();
+
+                }
+            });
+        </script>
+          <!--ENd...-->
+
+         <!-- Page Specific Styles -->
+        @if (IsSectionDefined("Styles"))
+        { 
+            @RenderSection("Styles")
+        }
+     
+    </head>
+    <body>
+
+     
+
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <br /><br />
+                    <p class="site-title">
+                        <img id="idImg" src="~/Content/images/logo_cie.png" />                      
+                    </p>
+                      Compagnie Ivoirienne d'Electricité
+
+                     
+                </div>
+               @* <div class="float-right">
+                    
+                  <section id="login">
+                        Bienvenue, <span class="username">@User.Identity.Name</span>!
+                        @Html.ActionLink("Deconnexion", "Logoff", "Connexion")
+                    </section>
+           
+                   
+                </div>*@                
+                     
+                      <ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>  Bienvenue, <span class="username">@User.Identity.Name</span> ! <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">					
+							<li><a href="/Home/Settings"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Compte</a></li>					
+							<li><a href="/Connexion/Logoff"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Deconnexion</a></li>
+							 
+						</ul>
+					</li>
+				</ul>            
+                    
+                <!--me-->
+
+                 <nav style="text-align:right">
+                         <div id="menu">
+                            <ul class="menu">
+                                <li>@Html.ActionLink("Administration", "Index", "Params")
+                                    <div>
+                                        <ul>
+                                            <li>@Html.ActionLink("Gestion des utilisateurs", "DisplayAllUsers", "Account")</li>
+                                            <li>@Html.ActionLink("Gestion Fichier Compteurs", "IndexFile", "Params")</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                  
+                                <li>@Html.ActionLink("Emission", "Index", "Emission")</li>
+                                <li>@Html.ActionLink("Reception", "Index", "Reception")</li>
+                                <li>@Html.ActionLink("LOG", "Index", "Home")
+                                    <div>
+                                    <ul>
+                                        <li>@Html.ActionLink("LOG EMISSION", "LogEmission", "Log")</li>
+                                        <li>@Html.ActionLink("LOG RECEPTION", "LogReception", "Log")</li>
+                                        @*<li>@Html.ActionLink("ECARTS...", "Ecart", "Log")</li>*@
+                                    </ul>
+                                        </div>
+                                </li>
+                                <li>                                    
+                                    <img src="~/Content/CSS/Menu/images/Home_DDI.png" alt="" width="30" height="30" />
+                                    @Html.ActionLink("Accueil", "Index", "Home")
+                                    <div>
+                                  <ul>
+                                        <li>
+                                            @Html.ActionLink("About", "Index", "Home")
+                                        </li>
+                                    </ul>  
+                                        </div>
+                                </li>
+                                @*<li>@Html.ActionLink("About", "About", "Home")</li>*@
+                                @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+
+               
+
+                            </ul>
+              
+                          </div>
+                    </nav>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+
+            @*<div class="content-wrapper">
+                <div class="float-left">*@
+            <div id="footers">
+                    @*<p>&copy; @DateTime.Now.Year - GS2E-DDI API SAPHIR-ACE VISION</p>*@
+                    <p>&copy; 2015- GS2E-DDI API SAPHIR-ACE VISION</p>
+                </div>
+               @* </div>
+            </div>*@
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

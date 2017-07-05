@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestLog</title>
+    <link href="~/Content/CSS/DatePicker/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/DataTable/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/modernizr-2.5.3.js"></script>
+    <script src="~/Scripts/Gle/jquery-ui.custom.js"></script>
+    <script src="~/Scripts/Gle/jquery.js"></script>
+    <script src="~/Scripts/Gle/modernizr.js"></script>
+    	<script>
+    	    Modernizr.load({    	        
+    	        test: Modernizr.inputtypes.date,
+    	        nope: "../Scripts/Gle/jquery-ui.custom.js",
+    	        callback: function () {
+    	            $("input[type=date]").datepicker();
+
+    	        }
+    	    });
+	</script>
+
+</head>
+<body>
+        Test of DatePicker
+        <input type="date"/>
+</body>
+</html>

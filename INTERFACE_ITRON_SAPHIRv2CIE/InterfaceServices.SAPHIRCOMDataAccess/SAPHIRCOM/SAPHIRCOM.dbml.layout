@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 25, 22.625" name="SAPHIRCOM">
+  <DataContextMoniker Name="/SAPHIRCOMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c16cd43e-d60f-4371-8c23-034bec671d35" absoluteBounds="0.75, 0.75, 2, 4.2708154296875">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/AdmUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe02f4e3-2165-4d6e-af20-522f7602f06e" absoluteBounds="0.765, 1.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be0986e1-aa51-4078-af22-87b283f5c562" absoluteBounds="9.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/historique" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52b1b63e-cf4a-41dd-91c1-695a8d0621f5" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64687a2c-92c4-4c4f-9f59-586df11b8c37" absoluteBounds="12.75, 6.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/mvt_releve_reception" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1394bfe-a7a8-451d-ace1-4546fe0e70ec" absoluteBounds="12.765, 7.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22259251-3a81-4d9c-878e-2c8095f2cf7a" absoluteBounds="9.75, 13.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/MVTACHAT_EPT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7bef121-76ee-4027-bb91-c9c64a3d1779" absoluteBounds="9.765, 14.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a22b5ea5-c6ee-43ab-a685-f45f1ec7d9f2" absoluteBounds="12.75, 13.75, 2, 6.5784326171875005">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/MVTPREP_EPT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16ca5a0a-e8af-4997-94a9-6162437bca12" absoluteBounds="12.765, 14.21, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64821431-f0c3-4014-841e-e4020d5cc1f8" absoluteBounds="15.75, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/RefExploitation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52a07c28-db28-4b0a-b683-1e1d97d212ed" absoluteBounds="15.765, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5acaf950-93bb-4538-a1c8-223cc1a734ef" absoluteBounds="15.75, 12.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/SynchroEnCour" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0530f523-1fd1-4c4e-9ed6-f636fbd25adc" absoluteBounds="15.765, 13.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9933aff-d0f2-4c11-8474-a33cfa66bc07" absoluteBounds="15.75, 15.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/Synchronisation_Queue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abf13e54-1dbc-4ec2-9390-f63c2dd1be47" absoluteBounds="15.765, 16.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1cd5b012-25c0-4efc-8e40-5dc2144cbe9d" absoluteBounds="18.75, 13.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/TOURNEE_EPT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1016667-ce4b-4029-b7f7-81f36c9450dd" absoluteBounds="18.765, 14.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af808065-fc19-4f53-a718-d9d8bfbfeba2" absoluteBounds="18.75, 16.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/tp_mvt_releve_reception" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1917af5-2fa1-42c0-8fc3-5e2f58cad7a2" absoluteBounds="18.765, 17.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3a87e69-e3bc-4b9e-be87-288200c9f27d" absoluteBounds="22.75, 1.25, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/LogBDD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="caf7d3b7-936e-4d20-ae53-824d03a057ab" absoluteBounds="22.765, 1.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94ecdcca-69a2-4b91-843a-a9e4da99ba5f" absoluteBounds="3.5, 1, 2, 4.8477197265625">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/ACTIVATION_ABO_ACEVISION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88453505-dc79-4e1d-8c7c-014a98ed8c01" absoluteBounds="3.515, 1.46, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="264bf2c9-33f9-4fb8-afcb-e768778abcf2" absoluteBounds="7, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/ParamsFile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30392255-d56c-4bbf-9940-5b4ed53fd601" absoluteBounds="7.015, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32a40082-f699-4582-a403-88c748ed0019" absoluteBounds="9, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/EvolutionBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a1e9d90-712f-497c-9a75-ddbbe66f1b65" absoluteBounds="9.015, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a6f8dbf-e3e9-4cbc-9936-c626e1fb9627" absoluteBounds="5.875, 4.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SAPHIRCOMDataContext/CTRHT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec499afd-8d33-49c4-9657-fe5d2b6395a3" absoluteBounds="5.89, 4.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

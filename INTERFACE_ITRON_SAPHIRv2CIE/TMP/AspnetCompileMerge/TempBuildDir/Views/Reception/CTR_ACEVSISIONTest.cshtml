@@ -1,0 +1,183 @@
+﻿@model IEnumerable<InterfaceServices.DTO.ReceptionDTO>
+
+@{
+    ViewBag.Title = "CTR_ACEVSISIONTest";
+}
+
+<h2>CTR_ACEVSISIONTest</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDReception)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodeSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodeExploitation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferenceRaccordement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdentifiantAbonne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCompteur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriodeFacturation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModeReception)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexNuit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexJour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexPointe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexHoraire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexReactif1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexReactif2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexReactif3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexIma1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexIma2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexIma3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexConsoMonop1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexConsoMonop2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexConsoMonop3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReleve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRecept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCpte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateExtract)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopExtract)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDReception)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeExploitation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferenceRaccordement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdentifiantAbonne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroCompteur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriodeFacturation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModeReception)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexNuit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexJour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexPointe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexHoraire)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexReactif1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexReactif2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexReactif3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexIma1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexIma2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexIma3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexConsoMonop1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexConsoMonop2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndexConsoMonop3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReleve)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRecept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCpte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateExtract)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopExtract)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,17 @@
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ACEVISION.Common.pdb
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ACEVISION.Common.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ACEVISION.Common.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ISF.DEPLOIEMENT.COMMON.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\log4net.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.csprojResolveAssemblyReference.cache
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Debug\ACEVISION.Common.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Debug\ACEVISION.Common.pdb

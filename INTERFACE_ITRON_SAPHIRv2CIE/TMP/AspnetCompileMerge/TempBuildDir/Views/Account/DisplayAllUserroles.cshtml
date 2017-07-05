@@ -1,0 +1,44 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Models.AllroleandUser
+@using GridMvc.Html
+@{
+    ViewBag.Title = "DisplayAllUserroles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Gestion des Profils</h2>
+
+
+<link href="~/Content/Gridmvc.css" rel="stylesheet"/>
+<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/gridmvc.js"></script>
+
+
+<div>
+    <img src="~/Images/Role.jpg" width="40" height="40" />
+    @Html.ActionLink("Consulter les profils", "DisplayAllRoles")
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="~/Images/add-link-256.png" width="30" height="30" />
+    @Html.ActionLink("Affecter un profil", "RoleAddToUser")
+     &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="~/Images/broken-link-xxl.png" width="25" height="25" />
+    @Html.ActionLink("Retirer un profil", "RemoveRoleAddedToUser")
+</div>
+
+<br />
+@Html.Grid(Model.AllDetailsUserlist).Columns(columns =>
+{
+columns.Add(c => c.UserName).Titled("Compte Utilisateur").Filterable(true);
+columns.Add(c => c.RoleName).Titled("Profil").Filterable(true);
+}).WithPaging(10).Sortable(true)
+
+
+<div>
+
+    <a href="@Url.Action("DisplayAllUsers")">
+     @*<img src="yourImageSource" style="vertical-align: middle; width: 30px;"> Grid View*@
+        <img src="~/Images/back.png" width="40" height="40" />
+</a>
+  
+    
+ 
+</div>

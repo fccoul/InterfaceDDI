@@ -1,0 +1,114 @@
+﻿@model IEnumerable<INTERFACE_ITRON_SAPHIRv2CIE.Models.UserProfile>
+@using GridMvc.Html 
+@{
+    ViewBag.Title = "DisplayAllUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des comptes utilisateurs</h2>
+
+<link href="~/Content/Gridmvc.css" rel="stylesheet"/>
+<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+ 
+
+<div>
+    <img src="~/Images/add-user-2-xxl.png" width="30" height="30" />
+    @Html.ActionLink("Ajouter un compte utilisateur", "Register")
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="~/Images/purchase-order-xxl.png" width="30" height="30" />
+    @Html.ActionLink("Gestion des Profils", "DisplayAllUserroles")
+</div>
+<br />
+@Html.Grid(Model).Columns(columns =>
+{
+columns.Add(c => c.UserId).Titled("UserId");
+columns.Add(c => c.UserName).Titled("Compte Utilisateur").Filterable(true);
+columns.Add(c => c.EmailID).Titled("Email");
+//columns.Add(c => c.UserName).Titled("Action").RenderValueAs(model => Html.ActionLink(model.UserId, "ResetPassword", "Account", new { IDUser = model.UserId }, null).ToHtmlString());
+columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => Html.ActionLink("Reinitialiser", "ResetPassword", new { IDUser = o.UserId }));
+columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => Html.ActionLink("Modifier", "EditAccount", new { IDUser = o.UserId }));
+}).WithPaging(10).Sortable(true)
+
+
+<script src="~/Scripts/gridmvc.js"></script>
+<script src="~/Scripts/BootStrap/jquery.toaster.js"></script>
+<script>
+    function randomToast() {
+        var priority = 'success';
+        var title = 'Succes';
+        var message = 'Enregistrement effectué avec succès !';
+
+        $.toaster({ priority: priority, title: title, message: message });
+    }
+
+    function randomToastSuccesMail() {
+        var priority = 'success';
+        var title = 'Succes';
+        var message = $('#msgError').val();
+
+        $.toaster({ priority: priority, title: title, message: message });
+    }
+
+    function randomToastFailed() {
+        var priority = 'danger';
+        var title = 'Echec';
+        var message = 'Enregistrement echoué !';
+
+        $.toaster({ priority: priority, title: title, message: message });
+    }
+
+    function randomToastFailedMail() {
+
+        var priority = 'danger';
+        var title = 'Echec';
+        var message = $('#msgError').val();
+
+        $.toaster({ priority: priority, title: title, message: message });
+    }
+</script>
+@{bool tempval=false;
+    if(TempData["ValResult"]!=null)
+    { tempval = bool.Parse(TempData["ValResult"].ToString());	 
+if (tempval == true)
+{
+    string msgError = TempData["Message"] != null ? TempData["Message"].ToString() : null;
+
+    if (string.IsNullOrEmpty(msgError))
+    {
+    <script type="text/javascript">
+    
+        randomToast() ;
+
+      </script>
+        }
+            else
+            {
+         @Html.Hidden( "msgError",TempData["Message"].ToString())
+                  <script type="text/javascript">
+                      randomToastSuccesMail();
+                  </script> 
+            }
+    
+    tempval = false;
+    }
+    else
+        {string msgError=TempData["Message"].ToString();
+        if (string.IsNullOrEmpty(msgError))
+             {
+                 <script type="text/javascript">
+                     randomToastFailed();         
+                  </script>   
+             } 
+             else
+             {
+            
+                   @Html.Hidden( "msgError",TempData["Message"].ToString())
+                  <script type="text/javascript">
+                      randomToastFailedMail();
+                  </script> 
+             }
+                tempval = false;
+        }
+        }
+    }
+		

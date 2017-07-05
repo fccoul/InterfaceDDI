@@ -1,0 +1,488 @@
+﻿@model IEnumerable<InterfaceServices.DTO.ReceptionDTO>
+
+@{
+    ViewBag.Title = "Infos ACE VISION";
+}
+
+ @section scripts{     
+   @* <script src="~/Scripts/DataTable/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>   *@
+
+    <script src="~/Scripts/DataTable/other/jquery.dataTables.min.js"></script>
+
+ 
+
+     <script src="~/Scripts/DataTable/Export/JSPrintReception.js"></script>
+    }
+
+<script type="text/javascript">
+ 
+    String.prototype.lpad = function (padString, length) {
+        var str = this;
+        while (str.length < length)
+            str = padString + str;
+        return str;
+    }
+
+    function mydate(el) {
+        //d = $("#DateDebut").val();
+        j = $("#DateDebut").val();
+        alert("j--->" + j);
+        d = document.getElementById(el).value;
+        alert("d--->" +d);
+        //var ladarJ = new Date();
+        //j = ladarJ.getDate();
+        convertDate = new Date(d);
+        alert(convertDate);
+
+        dt = convertDate.getDate();
+        alert(dt);
+        mn = convertDate.getMonth();
+        mn++;
+        yy = convertDate.getFullYear();
+        var fullDate = dt + "/" + mn + "/" + yy;
+        console.log("la date choisie :" + dt + "/" + mn + "/" + yy);
+
+        //document.getElementById(el).value = fullDate;
+        //var fulldateEN = yy + "-" + mn + "-" + dt.lpad('0',2);
+        //alert(fulldateEN);
+        document.getElementById(el).value = yy + "-" + mn + "-" + dt.lpad('0', 2);
+        //$(el).val(fullDate);
+ 
+    }
+
+    function CompareDate(datedebut, datefin)
+    {
+        if (datedebut.trim() != "" && datefin.trim() != "") {
+           
+            //var valDatDeb = moment(datedebut).format('YYYYMMDD');
+            var pos = datedebut.search("-");
+            if(pos==-1)//ie ou chrome
+                {
+                var valDatDeb = new Date(datedebut.replace(/(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3"));
+
+                var valDatFin = new Date(datefin.replace(/(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3"));
+                }
+                else
+                {
+                    var valDatDeb = new Date(datedebut.replace(/(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"));
+
+                    var valDatFin = new Date(datefin.replace(/(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"));
+                }
+
+            //if (new Date(datedebut).getTime() > new Date(datefin)) {
+            if (new Date(valDatDeb).getTime() > new Date(valDatFin)) {
+                $("#ResultUpload").html("<span style='color:red'>La date de debut doit etre inferieure à la date fin...</span>");
+                return true;
+            }
+            else {
+                $("#ResultUpload").html("");
+                return false;
+            }
+        }
+        else {
+            if(datedebut.trim() =="")
+                $("#ResultUpload").html("<span style='color:red'>Date debut non renseignée...</span>");
+            else
+                $("#ResultUpload").html("<span style='color:red'>Date fin non renseignée...</span>");
+            return true;
+            }
+    }
+
+    function SubmitFailure() {
+        $("#ResultSubmit").html("Erreur , Echec à l'enregistrement... ");
+    }
+
+    function SubmitOK() {
+        //alert("hello");
+        $("input[type=submit]").attr("disabled", "disabled");
+        $("#DisplayListItems").css("visibility", "hidden").slideUp("slow");
+
+        $("#loading").hide();
+    }
+
+    function ActivateBtnSubmit() {
+        //alert("hello");
+         
+        $("body").css("cursor", "progress");
+
+        $("#ResultUpload").html("");
+
+        $("#loading").hide();
+        $("#DisplayListItems").css("visibility", "hidden").slideUp("slow");
+        $('#btnSubmit').hide();
+        $("#grpBtn").css("visibility", "hidden");
+
+        var DateDebut = $("#DateDebut").val();
+        var DateFin = $("#DateFin").val();
+
+        //alert(DateDebut);
+        //?????checking also si les champs de dates sont renseignés...
+
+        if (!CompareDate(DateDebut, DateFin))
+        {
+            $("body").css("cursor", "default");
+
+            //$("input[type=submit]").removeAttr("disabled");
+            $('#loading').show();
+
+            $("#DisplayListItems").css("visibility", "hidden").slideUp("slow");
+
+            //20102015
+            $("#ResultUpload").html("");
+            //................
+
+            //----launch search
+            //var DateDebut=new Date(2015,01,01);
+            //var DateFin = new Date(2015, 02, 20);
+          
+            //alert(DateDebut);
+            var url = "/Reception/CTR_ACEVSISION";//dateDebut=" + DateDebut + "&dateFin=" + DateFin;
+
+            try {
+
+                var pos = DateDebut.search("-");
+                if (pos == -1)//ie ou chrome
+                {
+                    //var valDatDeb = new Date(DateDebut.replace(/(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3")).toLocaleString();
+                    //var valDatDeb = new Date(DateDebut.replace(/(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3")).toLocaleString();
+                    //var valDatFin = new Date(DateFin.replace(/(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3")).toDateString()();
+
+                    var valDatDeb = DateDebut;
+                    var valDatFin = DateFin;
+                }
+                else
+                {
+                    
+                    var valDatDeb = new Date(DateDebut.replace(/(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3")).toLocaleDateString();
+
+                    var valDatFin = new Date(DateFin.replace(/(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3")).toLocaleDateString();
+                }
+
+                //-------------        
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    async: true,
+                    //data: { 'dateDebut': DateDebut, 'dateFin': DateFin },
+                    data: { 'dateDebut': valDatDeb, 'dateFin': valDatFin },
+                    success: function (data) {
+                        try {
+                            //alert(data);
+                            var pos = data.search("Erreur");
+                            if(pos==-1)
+                            {
+                                //...................
+
+
+                                $("#DisplayListItems").css("visibility", "visible").slideDown("slow");
+                                var rowCount = $('#lstCTR_Index >tbody >tr').length;
+                               // alert("ok - "+rowCount);
+                               
+                                //alert(_items);
+                               // 
+                                  
+
+                                    $("#DisplayListItems").html(data);
+
+                                    $("#loading").hide();
+
+                                    var _items = $('#cptItems').val();
+                                   // alert("total:"+_items);
+                                    if (_items > 0)
+                                    {
+                                        $("#grpBtn").css("visibility", "visible");
+                                        $('#btnSubmit').show();
+                                    }
+                                    else
+                                    {
+                                        $("#grpBtn").css("visibility", "hidden");
+                                        $("#loading").hide();
+                                    }
+
+                                
+
+
+                                //.............
+                                //$('#lstCTR_Index').DataTable();
+
+                                //$('#lstCTR_Index').dataTable(); //datable-->dossier other
+
+
+                                //var oTable;
+                                //oTable = $('#lstCTR_Index').DataTable({
+                                //-OK
+                                //var oTable = $('#lstCTR_Index').dataTable({
+                                //    "bJQueryUI": true,
+                                //    "aoColumns": [
+                                //    {
+                                //        "bSortable": false,
+                                //        "bSearchable": false
+                                //    },
+                                //    null,
+                                //    null,
+                                //    null
+                                //    ]
+                                //});
+                            }
+                            else
+                            {
+                                //alert("else "+data);
+                                $("#ResultUpload").html("<span style='color:red'>" + data + "</span>");
+                                $("#loading").hide();
+                            }
+
+
+                            //----------------------------------
+                        }
+                        catch (e) {
+                            //alert("echec call methi !");
+                            //alert(e);
+                            $("#ResultUpload").html("<span style='color:red'>catch" + e + "</span>");
+                            $("#loading").hide();
+
+                            $("body").css("cursor", "default");
+                            //$("#loading").hide();
+                        }
+
+                    },
+                    error: function (errorData) {
+                        //$("#loading").hide();
+                        // alert("erreurjjjjjjjjj - echec !!!" + errorData);
+                        //$("#ResultUpload").html("Erreur :" + errorData);
+                        $("#ResultUpload").html("<span style='color:red'>error" + errorData + "</span>");
+                        $("#loading").hide();
+
+                        $("body").css("cursor", "default");
+                    }
+                });
+                //--------------------
+            }
+            catch (e)
+            {
+                alert(e);
+                //$("#ResultUpload").html("Erreur :" + e);
+                $("#ResultUpload").html("<span style='color:red'>" + e + "</span>");
+                $("#loading").hide();
+
+                $("body").css("cursor", "default");
+            }
+        }
+        $("body").css("cursor", "default");
+    }
+
+    function InsertToNode() {
+        //alert("hello");
+        $("input[type=submit]").removeAttr("disabled");
+
+        //$("#DisplayListItems").css("visibility", "visible").slideDown("slow");
+
+        //----launch search
+        //var DateDebut=new Date(2015,01,01);
+        //var DateFin = new Date(2015, 02, 20);
+        var DateDebut = $("#DateDebut").val();
+        var DateFin = $("#DateFin").val();
+        //alert(DateDebut);
+        var url = "/Reception/Upload_CTR_ACEVISION";//dateDebut=" + DateDebut + "&dateFin=" + DateFin;
+
+        
+        //-------------        
+        $.ajax({
+            url: url,
+            type: "POST",
+            async: false,
+            data: {},
+            success: function (data) {
+                try {
+                    //alert(data);
+                    //$("#DisplayListItems").html(data);
+                    //20102015
+                    if(data.indexOf("|")!= -1)
+                    {
+                        if(data.indexOf("KO")>-1)
+                        {
+                            var res = data.split("|");
+                            $("#ResultUpload").html("<span style='color:red'>" + res[0] + "</span>");
+                        }
+                        else                                
+                            $("#ResultUpload").html("<span style='color:red'>" + data + "</span>");
+                    }
+                    else
+                    {
+                        //21122016
+                        if (data.search("Annul") != -1)
+                        {
+                            $("#ResultUpload").html("<span style='color:red'>" + data + "</span>");
+                            }
+                            else
+                            {
+                         
+                                //$("#ResultUpload").html(data);
+                                         $("#ResultUpload").html("<span style='color:green'>" + data + "</span>");
+                                $("#DisplayListItems").css("visibility", "hidden").slideUp("slow");
+                            }
+                     }
+                         $('#btnSubmit').hide();
+                }
+                catch (e)
+                {
+                    alert("echec enregisterement...ok!");
+                }
+
+            },
+            error: function (errorData)
+            {
+                alert("erreur Insert Node - echec !!!" + errorData);
+            }
+        });
+        //--------------------
+    }
+
+
+    $(document).ready(function () {
+        /*
+        $("#DateDebut").change(function (obj) {
+            //alert("cool");
+            //alert($(this).val());
+            //alert(obj);
+            //console.log(obj);
+            //console.log(obj.currentTarget);
+            //console.log(obj.currentTarget.id);
+            mydate(obj.currentTarget.id);
+        });
+       */
+
+        $("#loading").hide();
+    
+        $("#DisplayListItems").css("visibility", "hidden").slideUp("slow");
+ 
+        $("#grpBtn").css("visibility", "hidden");
+        //--------
+        $("html").ajaxStart(function () { $(this).addClass("wait"); });
+        $("html").ajaxStop(function () { $(this).removeClass("wait"); });
+        //document.createElement('date');
+       
+        //myCreate();
+    });
+
+    //25072016
+    function ExportData()
+    {
+        //------------- 
+        var url = "/Reception/ExportDataReleve";
+
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: false,
+            dataType:'json',
+            success: function (data) {
+                try {
+                    alert(data);
+ 
+ 
+                }
+                catch (e) {
+                    alert("echec call Export !");
+                    
+                }
+
+            },
+            error: function (errorData) {
+                //$("#loading").hide();
+                // alert("erreurjjjjjjjjj - echec !!!" + errorData);
+                $("#ResultUpload").html("Erreur :" + errorData);
+            }
+        });
+    }
+</script>
+
+
+
+@section Styles{
+ 
+    @*<link href="~/Content/CSS/DataTable/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />*@
+
+     
+   <link href="@Url.Content("~/Content/dataTables/demo_table.css")" rel="stylesheet" type="text/css" />
+ <link href="@Url.Content("~/Content/dataTables/demo_page.css")" rel="stylesheet" type="text/css" />
+
+}
+
+@*@ViewBag.CptItems*@
+
+ 
+<h3>Données en provenance de la base ACE VISION...</h3>
+ <div id="ResultUpload"></div>
+
+<h3>Periode de Consommation</h3>
+@using (Ajax.BeginForm("DownloadDataFromACEVISION", "Reception", new AjaxOptions()
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        OnFailure = "SubmitFailure",
+        OnSuccess = "SubmitOK",
+        LoadingElementDuration = 10000,
+        LoadingElementId = "ajax-loader",
+        UpdateTargetId = "ResultUpload"
+    }))
+{
+    <img src="~/Content/images/loading.gif" alt="Traitement en cours..." id="ajax-loader" style="display:none" />
+<table>
+    <tr>
+        <td>
+            @Html.Label("Date debut") 
+            <input  type="date" name="DateDebut" id="DateDebut"  />
+        </td>
+        <td>
+            @Html.Label("Date Fin") 
+            <input  type="date" name="DateFin" id="DateFin" />
+        </td>
+        <td>
+            <input type="button" value="Rechercher" id="btnSearch" onclick="ActivateBtnSubmit()" />
+        </td>
+    </tr>
+ 
+</table>
+
+     <p align="left" id="grpBtn">
+   @* @Html.ActionLink("Exporter", "ExportToExcel",new { page = 1, orderBy ="~", filter = "~" }, new { id ="exportLink",@class="export" })*@
+       <a href="@Url.Action("ExportToExcel", "Reception")" title="Exporter la liste sous Excel...">
+            <img src="~/Images/excel.png" alt="Exporter" width="30" height="30" />
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="#" id="linkPrint" title="Imprimer la liste..." onclick="printContent('divContent')">
+            <img src="~/Images/print.jpg" alt="Imprimer" width="40" height="30" />
+        </a>
+     </p>
+    
+         <div id="loading" style="vertical-align:middle">        
+            <i>Recherche en cours , cette opération peut nécessiter plusieurs minutes , veuillez patienter...</i><br />
+        <img src="~/Content/images/loading3.gif" alt="Patientez svp..." width="300" height="200"/>
+         
+    </div>
+    
+ 
+    @*
+    
+    <input type="button" value="Imprimer" id="btnImprim" onclick="ExportData()" />*@
+    <div id="DisplayListItems">
+
+     @{Html.RenderPartial("CTR_ACEVSISION");}
+@*  @Html.Partial("CTR_ACEVSISION",(int) @ViewBag.CptItems)*@
+        </div>
+}
+<br />
+<input type="button" value="Transférer dans SAPHIR"  id="btnSubmit" onclick="InsertToNode()" style="display:none"/>
+  
+ 
+    
+    
+
+
+ 
+ 
+
+ 
+ 
+

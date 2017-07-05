@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ACE_NODE_TI_16112016" Class="SAPHIRCOMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=ACE_NODE_TI_16112016;User ID=sa" SettingsObjectName="InterfaceServices.SAPHIRCOMDataAccess.Properties.Settings" SettingsPropertyName="ACE_NODE_TI_16112016ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AdmUsers" Member="AdmUsers">
+    <Type Name="AdmUser">
+      <Column Name="Matricule" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoginName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date_creation" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Date_derniere_modification" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Statut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Init_User_Password" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EstAdminSpecial" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EstUserMigration" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EstUserBatch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChiffrementDuPasswordReversible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateDerniereModificationPassword" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NombreEchecsOuvertureSession" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DateDerniereConnexion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DerniereConnexionReussie" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateDernierVerrouillage" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NomUser" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="PrenomUser" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.historique" Member="historiques">
+    <Type Name="historique">
+      <Column Name="codsite" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="codexp" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="perfact" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="numoperex" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="modextract" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="numoperec" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="modrecept" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="nbrmvt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="datoper" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="datrecept" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="datecpte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="datextract" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idhistorique" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mvt_releve_reception" Member="mvt_releve_receptions">
+    <Type Name="mvt_releve_reception">
+      <Column Name="idreception" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codsite" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="codexp" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="refraccord" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="idabon" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="numctr" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="perfact" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="modrecept" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="index_nuit" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_jour" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_pointe" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_horaire" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_reactif1" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_reactif2" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_reactif3" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_ima1" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_ima2" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_ima3" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_cons_monop1" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_cons_monop2" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_cons_monop3" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="datereleve" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="datrecept" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="topano" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="datcpte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MVTACHAT_EPT" Member="MVTACHAT_EPTs">
+    <Type Name="MVTACHAT_EPT">
+      <Column Name="CODEXP" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="REFBRANCH" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="IDABON" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="NUMCTR" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="MONTENERGIE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTREMB" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NBKWH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTDETTEREST" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMOPERATEUR" Type="System.String" DbType="Char(25)" CanBeNull="true" />
+      <Column Name="NOMOPMOBIL" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="DATREGL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NUMOPER" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Datrecept" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Dattrait" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MVTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MVTPREP_EPT" Member="MVTPREP_EPTs">
+    <Type Name="MVTPREP_EPT">
+      <Column Name="CODEXP" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="NUMDI" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="IDABON" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="REFBRANCH" Type="System.String" DbType="Char(13)" CanBeNull="true" />
+      <Column Name="NOMABON" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="PRENABON" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="DATABON" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="POSABON" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="STATUT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NUMCTR" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="USAGEABON" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="TYPCOMPTEUR" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TELPRIVE" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="TELMOBILE" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="TYPTARIF" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="TYPHABITAT" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="NBREPIECE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="KIT_INSTALL" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="CATEGORIE_EPT" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="TYPROJET" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="PSABON" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TEOM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MONTDETTEREST" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTNOMINAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTINTERET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DATOPERATION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TOPEXTRACT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DATEXTRACTION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TYPDI" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="REGLDISJ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RefExploitation" Member="RefExploitations">
+    <Type Name="RefExploitation">
+      <Column Name="CodeExploitation" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Explotation_libelle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DirectionRegionale" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SiteGesabel" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SynchroEnCours" Member="SynchroEnCours">
+    <Type Name="SynchroEnCour">
+      <Column Name="CodeExploitation" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DateDeLancement" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NomMachine" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MatriculeUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EstSynchroManuelle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EtapeSynchro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Synchronisation_Queue" Member="Synchronisation_Queues">
+    <Type Name="Synchronisation_Queue">
+      <Column Name="CodeExploitation" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatriculeUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NomMachine" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EstSynchroManulle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateInitialisationDemande" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EtapeSynchro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ArretDemande" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IdSynchronisation" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EstEmission" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EstReception" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOURNEE_EPT" Member="TOURNEE_EPTs">
+    <Type Name="TOURNEE_EPT">
+      <Column Name="CODEXP" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CODZONE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="CODTOURNE" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CODLOCALITE" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="TOPEXTR" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tp_mvt_releve_reception" Member="tp_mvt_releve_receptions">
+    <Type Name="tp_mvt_releve_reception">
+      <Column Name="idreception" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codsite" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="codexp" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="refraccord" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="idabon" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="numctr" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="perfact" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="modrecept" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="index_nuit" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_jour" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_pointe" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_horaire" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_reactif1" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_reactif2" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_reactif3" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_ima1" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_ima2" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_ima3" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_cons_monop1" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_cons_monop2" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="index_cons_monop3" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="datereleve" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="datrecept" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="topano" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="datcpte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogBDD" Member="LogBDDs">
+    <Type Name="LogBDD">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateExecution" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Auteur" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Niveau" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TotalRead_fromAce" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalInserted_toNode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalRead_fromNode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalInserted_toAce" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUpdated_toAce" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExecutionMode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TypeTraitement" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PeriodeFacturation" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ExecutionID" Type="System.String" DbType="NVarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="CptExecution" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ACTIVATION_ABO_ACEVISION" Member="ACTIVATION_ABO_ACEVISIONs">
+    <Type Name="ACTIVATION_ABO_ACEVISION">
+      <Column Name="idemission" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODSITE" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CODEXP" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMGENE" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="REFRACCORD" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="IDABON" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="NOM_ABON" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="PRENOM_ABON" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="NUMCTR" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="RUE_BVD_AVENUE" Type="System.String" DbType="Char(58)" CanBeNull="true" />
+      <Column Name="LOT_ILOT" Type="System.String" DbType="Char(58)" CanBeNull="true" />
+      <Column Name="AGGLO_QUAT_AUTR" Type="System.String" DbType="Char(58)" CanBeNull="true" />
+      <Column Name="REFRACCORD_ANC" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="IDABON_ANC" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="NUMCTR_ANC" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="TYPDI" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="DATCREAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HEURCREAT" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="DATEXTRACT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HEUREXTRACT" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="MODEXTRACT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParamsFile" Member="ParamsFiles">
+    <Type Name="ParamsFile">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PathFileExcel" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordFileExcel" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdatedPassword" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateUpdatedFile" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AccountUpdatedPath" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AccountUpdatetedPwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EvolutionBase" Member="EvolutionBases">
+    <Type Name="EvolutionBase">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Full_Version" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DateUpated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTRHT" Member="CTRHTs">
+    <Type Name="CTRHT">
+      <Column Name="IDLINEXCEL" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SERIALNUMBER" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD_READER" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD_LABO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TYPEMETER" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRMWARE" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UPDATED" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_OPERATION" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

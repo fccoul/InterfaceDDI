@@ -1,0 +1,177 @@
+﻿@model IEnumerable<InterfaceServices.DTO.ReceptionDTO>
+
+@{
+    ViewBag.Title = "CTR_ACEVSISION";
+
+    ViewBag.CptItems = @Model==null?-1:@Model.Count();
+}
+
+<h3>Liste des Compteurs...</h3>
+
+ <br />
+ 
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+         
+       // oTable = $('#lstCTR_Index').DataTable({
+        //oTable = $('#lstCTR_Index');
+        ///..............;
+        //var rowCount = $('#lstCTR_Index >tbody >tr').length;
+        //alert(rowCount);
+        //$('#cptItems').val(rowCount);
+        /////////////////////////////
+        
+        $('#lstCTR_Index tbody td img').click(function () {
+
+            //alert("inside");
+            //..................
+            var nTr = this.parentNode.parentNode;
+            if (this.src.match('Minus')) {
+                /* This row is already open - close it */
+
+                this.src = "/Content/images/Plus.png";
+                try{
+                    oTable.fnClose(nTr);
+                }
+                catch (e) {
+                    alert(e);
+                }
+            }
+            else {
+                /* Open this row */
+                //alert("ok go to method");
+                //...................
+
+                this.src = "/Content/images/Minus.png";
+                var serialNumber = $(this).attr("rel");
+
+                //alert("le ctr est : " +serialNumber);
+                var url = "/Reception/getDats_FromEOBilling_ACEVISIOn_Detail?NumCTR=" + serialNumber;
+                 
+                $.get(url, function (Index) {
+                    try{
+                        oTable.fnOpen(nTr, Index, 'details');
+                    }              
+                     catch (e) {
+                             alert("details : " +e);
+                       }
+                });
+            }
+        });
+        //--------------------------
+        /* Initialize table and make first column non-sortable*/
+        var oTable;
+        //oTable = $('#lstCTR_Index').DataTable();
+        //oTable = $('#lstCTR_Index').dataTable({
+        oTable = $('#lstCTR_Index').dataTable({
+            "bJQueryUI": false,
+            "aoColumns": [
+            {
+                "bSortable": false,
+                "bSearchable": false
+               
+            },
+             null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+            ]
+        });
+
+    });
+
+</script>
+
+@*@ViewBag.CptItems
+blue*@
+@*<input type="text" id="cptItems" value="<%: ViewData["CptItems"].ToString()%>" />*@
+@*<input type="text" id="cptItemsss" value="@(ViewBag.CptItems)" />
+
+@Html.TextBox("CptItems",(int)@ViewBag.CptItems,new {id="cptItemssss"})*
+
+@TempData["_cptItems"]
+<input type="text" id="" value="@TempData["_cptItems"]" />*@
+@Html.Hidden("CptItems",@TempData["_cptItems"],new {id="cptItems"})
+
+
+<table id="lstCTR_Index" class="display" cellspacing="0">
+    <thead>
+        <tr>
+       
+            <th></th>
+
+             <th>
+            @Html.DisplayName("N°Compteur")
+        </th>
+        <th>
+            @Html.DisplayName("Site")
+        </th>
+        <th>
+            @Html.DisplayName("Exploitation")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ReferenceRaccordement)*@
+            @Html.DisplayName("Raccordement")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.IdentifiantAbonne)*@
+            @Html.DisplayName("Id Abonne")
+        </th>
+       
+       <th>
+            @Html.DisplayNameFor(model => model.PeriodeFacturation)
+        </th>
+ 
+        <th>
+            @Html.DisplayNameFor(model => model.DateReleve)
+        </th>
+   
+    </tr>
+    </thead>
+    <tbody>
+@if (Model!=null && Model.Count() > 0)
+{
+
+foreach (var item in Model) {
+    
+    
+        <tr>
+     
+                <td>
+                     <img src="~/Content/images/Plus.png" alt="expand/collapse" rel="@item.NumeroCompteur" />
+ 
+                </td>
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.NumeroCompteur)
+                </td>
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.CodeSite)
+                </td>
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.CodeExploitation)
+                </td>
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.ReferenceRaccordement)
+                </td>
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.IdentifiantAbonne)
+                </td>    
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.PeriodeFacturation)
+                </td>  
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.DateReleve)
+                </td>
+ 
+    </tr>
+}
+}
+        </tbody>
+</table>
+
+     

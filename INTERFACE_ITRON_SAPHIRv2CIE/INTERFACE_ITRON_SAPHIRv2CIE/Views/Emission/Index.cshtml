@@ -1,0 +1,182 @@
+﻿@model IEnumerable<InterfaceServices.DTO.ActivationAbonneDTO>
+
+@{
+    ViewBag.Title = "Infos SAPHIR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+
+      <script src="~/Scripts/DataTable/other/jquery.dataTables.min.js"></script>
+     @* <script src="~/Scripts/DataTable/other/jquery.dataTables.minNew.js"></script>*@
+
+    @*  <script src="~/Scripts/DataTable/Export/dataTables.buttons.min.js"></script>    
+    <script src="~/Scripts/DataTable/Export/buttons.flash.min.js"></script>
+      <script src="~/Scripts/DataTable/Export/jszip.min.js"></script>
+    <script src="~/Scripts/DataTable/Export/pdfmake.min.js"></script>
+    <script src="~/Scripts/DataTable/Export/vfs_fonts.js"></script>
+    <script src="~/Scripts/DataTable/Export/buttons.html5.min.js"></script>
+    <script src="~/Scripts/DataTable/Export/buttons.print.min.js"></script>*@
+ 
+    <script src="~/Scripts/DataTable/Export/JSPrint.js"></script>
+
+}
+
+@section Styles{
+
+     <link href="@Url.Content("~/Content/dataTables/demo_table.css")" rel="stylesheet" type="text/css" />
+ <link href="@Url.Content("~/Content/dataTables/demo_page.css")" rel="stylesheet" type="text/css" />
+
+
+    <link href="@Url.Content("~/Scripts/DataTable/Export/buttons.dataTables.min.css")" rel="stylesheet" type="text/css" />
+
+}
+
+ 
+<h3>Envoi des informations SAPHIR vers ACE VISION...</h3>
+<br />
+<div id="divlstDISucces"></div>
+<div id="ResultUpload">
+    @*<i style="color: red">@ViewBag.MsgErr</i>*@
+    <i style="color:red"></i>
+</div>
+
+
+ 
+  <div id="loading" style="vertical-align:middle;">        
+            <i>Traitement en cours , cette opération peut nécessiter plusieurs minutes , veuillez patienter...</i>
+        <div><img src="~/Content/images/loading3.gif" alt="Patientez svp..."/>      </div>   
+    </div>
+<div id="divlstDI">
+    <p align="left">
+   @* @Html.ActionLink("Exporter", "ExportToExcel",new { page = 1, orderBy ="~", filter = "~" }, new { id ="exportLink",@class="export" })*@
+       <a href="@Url.Action("ExportToExcel", "Emission")" title="Exporter la liste sous Excel...">
+            <img src="~/Images/excel.png" alt="Exporter" width="30" height="30" />
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="#" id="linkPrint" title="Imprimer la liste..." onclick="printContent('divContent')">
+            <img src="~/Images/print.jpg" alt="Imprimer" width="40" height="30" />
+        </a>
+     </p>
+ 
+@*  <a href="#" onclick="window.print(); return false;">Print</a>*@
+
+@*<div id="divContent">*@
+
+  @*@Html.TextBox("cptLstDI",(string)@ViewBag.CptElt)*@
+  @Html.Hidden("cptLstDI",(string)@ViewBag.CptElt)
+ 
+
+<table id="lstDI" class="display">
+    <thead>
+    <tr>
+        <th></th>
+   
+          
+     @*     <th>
+            @Html.DisplayName("Ancien Raccordement")
+        </th>*@
+        
+       
+     @*   <th>
+            @Html.DisplayName("Ancien Identifiant")
+        </th>*@
+         <th>
+            @Html.DisplayName("Client")
+        </th>
+          <th>
+            @Html.DisplayName("Identifiant Abonne")
+        </th>
+         <th>
+            @Html.DisplayName("Raccordement")
+        </th>
+         <th>
+            @Html.DisplayName("Compteur")
+        </th>
+     @*   <th>
+            @Html.DisplayName("Ancien Compteur")
+        </th>
+   *@
+
+    @*       <th>
+            @Html.DisplayName("Adresse")
+        </th>*@
+         
+        <th>
+            @Html.DisplayName("Type Demande")
+        </th>
+             <th>
+            @Html.DisplayName("Site")
+        </th>
+        <th>
+            @Html.DisplayName("Exploitation")
+        </th>
+        
+        <th></th>
+    </tr>
+        </thead>
+
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+              <td><img src="~/Content/images/Plus.png" alt="expand/collapse" rel="@item.NumeroCompteur" /> 
+                </td>
+        
+         
+          @*  <td>
+                @Html.DisplayFor(modelItem => item.OLD_ReferenceRaccordement)
+            </td>*@
+
+          
+         @*   <td>
+                @Html.DisplayFor(modelItem => item.OLD_IdentifiantAbonne)
+            </td>*@
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.Client)
+            </td>
+
+              <td>
+                @Html.DisplayFor(modelItem => item.IdentifiantAbonne)
+            </td>
+               <td>
+                @Html.DisplayFor(modelItem => item.ReferenceRaccordement)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCompteur)
+            </td>
+        @*    <td>
+                @Html.DisplayFor(modelItem => item.OLD_NumeroCompteur)
+            </td>*@
+
+      @*          <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>*@
+            
+     
+            <td>
+                @Html.DisplayFor(modelItem => item.LibelleTypeDemande)
+            </td>
+  
+                <td>
+                @Html.DisplayFor(modelItem => item.CodeSite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodeExploitation)
+            </td>
+        
+        </tr>
+    }
+        </tbody>
+</table>
+<br /><br />
+ 
+ <input type="button" id="btnEmission" value="Transférer dans ACE VISION" /> 
+ </div> 
+    
+
+@*<iframe id='iframePrint' name='iframePrint'></iframe>*@
+
+ 

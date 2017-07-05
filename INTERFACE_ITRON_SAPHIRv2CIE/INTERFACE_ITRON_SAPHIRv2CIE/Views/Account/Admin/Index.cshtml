@@ -1,0 +1,419 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Common.Administration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Paramétrage BDD</title>
+     <script src="~/Scripts/DataTable/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+ 
+<h2>Paramétrage Serveur de base de données du noeud...</h2>
+
+
+@using (Html.BeginForm("AddParams", "Admin"))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend></legend>
+
+         <div id="ResultSubmit"></div>
+
+         
+   @*         <table>
+                <tr style="color:orange">
+                    <td > @Html.Label("Serveur BDD SAPHIR")</td>
+                    <td> @Html.Label("Accès Services WEB ITRON") </td>
+                     
+                   
+                </tr>
+                <tr style="align-content:center">
+                    <td> @Html.RadioButton("paramServSce", "1", true)</td>
+                    <td>@Html.RadioButton("paramServSce", "2", false)</td>
+                    
+                    
+                </tr>
+            </table>*@
+          
+               
+            
+    
+         
+    <hr />
+    <div id="ContentParams">
+          
+            <div id="ParamsServer">
+                 <h3 style="color:orange">Connexion au serveur</h3>
+                   
+                   @* @Html.Label("Nom du serveur de Base de données")      *@
+                @Html.Raw(string.Format("Nom du serveur de Base de données  - Actuel : {0}", ViewBag.ActualServer))
+                     <br />     
+                   @* @Html.TextBox("txtNameServer")*@
+              @*  @Html.EditorFor(model => model.NameServer)*@
+                     @Html.TextBoxFor(model => model.NameServer, new { id = "txtNameServer" })
+                     @Html.ValidationMessageFor(model => model.NameServer)  
+       
+                   <table>
+
+                       <tr>
+                           <td>
+                            @Html.RadioButton("ModeAuthenticate", "1", true)
+                            @Html.Label("Utilisez l'authentification SQL Server")
+                            </td>
+
+                           <td>
+                           
+                            @Html.RadioButton("ModeAuthenticate", "2", false)                     
+                            @Html.Label("Utilisez l'authentification Windows")
+                           </td>
+                           <td>
+                               <div id="ResultTestServer"></div>
+                           </td>
+                           </tr>
+                    </table>
+
+                    @Html.Label("Nom Utilisateur")
+                    @*@Html.TextBox("txtNameUser")*@
+                    @Html.TextBoxFor(model => model.NameUser, new { id = "txtNameUser" })
+                    @Html.ValidationMessageFor(model => model.NameUser)     
+
+                    @Html.Label("Mot de Passe")
+                   @* @Html.Password("txtPwd")*@
+                    @Html.PasswordFor(model => model.Pwd, new { id = "txtPwd" })
+                    @Html.ValidationMessageFor(model => model.Pwd)
+                   
+               <hr />
+                   <h3 style="color:orange">Connexion à la base de données du NOEUD</h3>
+                  @Html.Label("Selectionner la base de données")
+                  @*    @Html.EditorFor(model => model.BDDName)*@                                     
+                @*@Html.DropDownList("listBDDs") *@
+                @*(Model=>Model.BDDName,null,new {id="listBDDs"})*@
+                @Html.DropDownListFor(model => model.BDDName, @ViewBag.listBDDs as IEnumerable<SelectListItem>, new { id = "listBDDs" }) 
+                 @Html.ValidationMessageFor(model => model.BDDName)
+              @*      <select id="listBDDs">
+                        <option value="..."></option>                     
+                    </select>*@
+                    
+                </div>
+
+        <br />
+        <br/>
+            <div id="ParamsService">
+                <table>
+                    <tr>
+                        <td> @Html.Label("Adresse du Serveur")</td>
+                        <td> 
+                           @* @Html.TextBox("txtAdrServeur")*@
+
+                            @Html.EditorFor(model => model.AdrServeur)
+                            @Html.ValidationMessageFor(model => model.AdrServeur)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td> @Html.Label("Port")</td>
+                        <td>
+                           @* @Html.TextBox("textPort")*@
+                             @Html.EditorFor(model => model.Port)
+                             @Html.ValidationMessageFor(model => model.Port)
+                        </td>
+                    </tr>
+                </table>             
+
+                @*@Html.Label("URl du Service WEB :", new {id="UrlSceWEB" })*@
+               @* @Html.Label("URl du Service WEB :", new {id="UrlSceWEB" })
+                @ViewBag.urlWebSce*@
+                @Html.Raw(string.Format("URl du Service WEB : {0}", ViewBag.urlWebSce))
+            </div>
+        <br />
+        
+           
+    </div>
+
+        
+    <input type="button" value="Annuler" id="btnCancel" />
+
+    <input type="submit" value="Enregistrer" id="btnEnregister" />
+
+        <br />
+        <a href="@Url.Action("Connecter","Connexion")"><< retour</a>
+
+ @*       <div>
+    <a href="@Url.Action("DisplayAllUsers")">
+        <img src="~/Images/back.png" width="40" height="40" /></a>
+           
+</div>*@
+
+    </fieldset>
+}
+
+<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+ 
+<script src="~/Scripts/BootStrap/jquery.toaster.js"></script>
+
+<script src="~/Scripts/Gle/JSParams.js"></script>
+ <script type="text/javascript">
+ 
+ 
+
+     function SubmitFailure() {
+         $("#ResultSubmit").html("Erreur , Echec à l'enregistrement... ");
+     }
+
+     function testOK() {
+         alert("kpleus");
+     }
+
+     function checkServer() {
+
+         $("#ResultTestServer").html("Tentative de connexion au serveur de base de données...");
+         $("body").css("cursor", "progress");
+         //-Test d'accès au server BDD
+         var nameServer = $('#txtNameServer').val();
+         var valSelected = 1;
+         var valSelectedMode = $("input[name='ModeAuthenticate']:checked").val();
+         //CheckConnexion(short itemParam,short ? ModeConnexion)
+         var nameUser = $('#txtNameUser').val();
+         var pwdUser = $('#txtPwd').val();
+         var url = "/Admin/CheckConnexion";
+         var bool = false;
+         $.ajax({
+             url: url,
+             type: "GET",
+             async: true,//false,//true, //true pour le wiat du cursor...
+             data: { 'NameServer': nameServer, 'itemParam': valSelected, '_UserName': nameUser, '_Password': pwdUser, 'ModeConnexion': valSelectedMode },
+             success: function (data)
+             {
+                 //alert(data);
+
+                 if (data.indexOf("|") == -1) {
+                     $("#ResultTestServer").html("<span style='color:green'>" + data + "</span>");
+                     bool = true;
+                 }
+                 else {
+                     var res = data.split("|");
+                     $("#ResultTestServer").html("<span style='color:red'>" + res[0] + "</span>");
+
+                     $("#btnEnregister").css("visibility", "hidden");
+                     $("body").css("cursor", "default");
+                 }
+
+                 if (bool) {
+                     //---------------------------2Nd mthode
+                     var url = "/Admin/getAllDatabase_ofServer"
+                     $.ajax({
+                         url: url,
+                         type: "GET",
+                         async: true,
+                         data: {},
+                         success: function (data)
+                         {
+                             try {
+                                 //alert(data);
+                                 $.each(data, function (i, database) {
+                                     //alert(database);                             
+                                     $("#listBDDs").append(new Option(database, database));
+
+                                 });
+                                 $("body").css("cursor", "default");
+                                 $("#btnEnregister").css("visibility", "visible");
+                                 
+                             }
+                             catch (e) {
+                                 alert("echec call methi !");
+                                 $("#btnEnregister").css("visibility", "hidden");
+                                 $("body").css("cursor", "default");
+                             }
+
+                         },
+                         error: function (errorData)
+                         {
+                             alert("erreur interne - echec !!!" + errorData);
+                             $("#btnEnregister").css("visibility", "hidden");
+                             $("body").css("cursor", "default");
+                         }
+                     });
+                     //--------------
+                 }
+                 else
+                 {
+                     $("#listBDDs").find("option").remove();
+                 }
+
+             },
+             error: function (errorData)
+             {
+                // alert("erreur !!!" + errorData);
+                 console.log(errorData);
+                 $("#btnEnregister").css("visibility", "hidden");
+                 $("body").css("cursor", "default");
+             }
+         });
+
+     }
+
+
+
+
+     $(document).ready(function () {
+
+         $("html").ajaxStart(function () { $(this).addClass("wait"); });
+         $("html").ajaxStop(function () { $(this).removeClass("wait"); });
+
+         //Par Defaut masquer params URL WEB Sce
+         $("#ParamsService").css("visibility", "hidden").slideUp("slow");
+         $("#ParamsFileExcel").css("visibility", "hidden").slideUp("slow");
+
+         //$("#btnCrypt").css("visibility", "hidden");
+         //$("#btnDeCrypt").css("visibility", "hidden");
+
+         $("#btnCancel").click(function () {
+             //alert("hello kpleus !");
+             //alert($("input[name='paramServSce']:checked").val());
+
+             /*
+             var url = "/Params/TestWebSce_Access";
+ 
+             $.get(url, function (data) {
+                 alert("resultat : " + data);
+             });
+             */
+
+             //$('FormParams').trigger("reset");
+             // $('#FormParams')..trigger("reset");
+
+             $('form').trigger("reset");
+             $("#ResultTestServer").html("");
+
+         });
+
+         $("#btnEnregister").css("visibility", "hidden");
+
+
+
+
+         $("input[name='paramServSce']").change(function () {
+             //alert("click here man");
+             //CheckConnexion
+             var valSelected = $("input[name='paramServSce']:checked").val();
+
+             //show / hide Div Params
+             if (valSelected == 1)//BDD
+             {
+                 $("#ParamsServer").css("visibility", "visible").slideDown("slow");
+                 $("#ParamsService").css("visibility", "hidden").slideUp("slow");
+
+                 //$("#ParamsUsers").css("visibility", "hidden").slideDown("slow");
+
+                 $("#btnCancel").css("visibility", "visible");
+                 $("#btnEnregister").css("visibility", "visible");
+                 $("#btnCrypt").css("visibility", "hidden");
+             }
+             //else {
+             //    $("#ParamsServer").css("visibility", "hidden").slideUp("slow");                 
+             //    $("#ParamsService").css("visibility", "visible").slideDown("slow");
+             //}
+             if (valSelected == 2) {
+                 $("#ParamsServer").css("visibility", "hidden").slideUp("slow");
+                 $("#ParamsService").css("visibility", "visible").slideDown("slow");
+                 // $("#ParamsFileExcel").css("visibility", "hidden").slideDown("slow");
+
+                 $("#btnCancel").css("visibility", "visible");
+                 $("#btnEnregister").css("visibility", "visible");
+                 $("#btnCrypt").css("visibility", "hidden");
+                 //$("#btnDeCrypt").css("visibility", "hidden");
+             }
+
+             //if(valSelected==3)
+             //{
+             //    $("#ParamsServer").css("visibility", "hidden").slideUp("slow");
+             //    $("#ParamsService").css("visibility", "hidden").slideUp("slow");
+             //    $("#ParamsFileExcel").css("visibility", "visible").slideDown("slow");
+
+             //    $("#btnCancel").css("visibility", "hidden");
+             //    $("#btnEnregister").css("visibility", "hidden");
+             //    $("#btnCrypt").css("visibility", "hidden");
+             //    $("#btnDeCrypt").css("visibility", "hidden");
+
+
+             //}
+
+             //if (valSelected = 4) {
+             //    $("#ParamsServer").css("visibility", "hidden").slideUp("slow");
+             //    $("#ParamsService").css("visibility", "hidden").slideDown("slow");
+
+             //    var url = "/Account/DisplayAllUsers";
+             //    $.get(url, function (data) {
+             //       // $("#ParamsUsers").html(data);
+             //        //$("#ParamsUsers").css("visibility", "visible").slideDown("slow");
+
+             //    });
+
+
+
+             //}
+
+         });
+
+         $("#FileUpload").change(function () {
+             var filename = $(this).val();
+             var test = document.getElementById("FileUpload").files[0].name;
+             alert(test);
+             alert("hello" + filename);
+             $("#filename").val(filename);
+         });
+
+
+
+         $("#txtPwd").change(function () {
+
+             $("#ResultTestServer").html("");
+             $("#listBDDs").find("option").remove();
+             //alert("ok in");
+             //------------
+             checkServer();
+             //------------
+         });
+
+         $("#txtNameServer").change(function () {
+             if ($("input[name='ModeAuthenticate']:checked").val() == 2)
+                 checkServer();
+         });
+
+
+         //activate/descativate Authenticate mode
+         $('input[name="ModeAuthenticate"]').change(function () {
+
+             var valSelectedMode = $("input[name='ModeAuthenticate']:checked").val();
+             if (valSelectedMode == 2)//descativate
+             {
+                 $('#txtNameUser').attr('readonly', true);
+                 $('#txtPwd').attr('readonly', true);
+
+                 checkServer();
+             }
+             else {
+                 $('#txtNameUser').attr('readonly', false);
+                 $('#txtPwd').attr('readonly', false);
+             }
+         });
+
+
+
+     });
+
+</script>
+
+ 
+</body>
+</html>

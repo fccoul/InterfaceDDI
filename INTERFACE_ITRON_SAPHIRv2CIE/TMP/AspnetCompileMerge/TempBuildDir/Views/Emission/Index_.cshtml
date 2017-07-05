@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script type="text/javascript">
+    //-recuperation de toutes les exploitations rattaché au site
+    function getExploitataions_ofSite() {
+
+        //alert($("#listProjet" + i + "  option:selected").text());
+        var valSite = $("#idListSites option:selected").val();
+
+        try {
+            $("#idListExploitation").empty();
+            $("#idListExploitation").append(new Option("", "..."));
+            
+
+            var url = "/Emission/getAllExploiatations_ofSite";//?codeSite=" + valSite;
+            
+            $.ajax({
+                url: url,
+                type: "GET",
+                async: false,
+                datatype:'json',
+                data: { 'codeSite': valSite },
+                success: function (data) {
+                    try {
+                        if (data != null && data.length > 0) {
+                            
+                            //alert(data);
+                            $.each(data, function (index, val) {
+                                //alert(index);
+                              // alert(val.CodeExploitation);
+                               $("#idListExploitation").append(new Option(val.Exploitation_libelle, val.CodeExploitation));
+                            });
+                           
+                        }
+                        else {
+                            // alert("oops");
+                            $('#ResultUpload').html("Aucune exploitation rattachée à ce site...");
+                        }
+                    }
+                    catch (e) {
+                        alert(e)
+                    }
+
+                },
+                error: function (errorData) {
+                    alert(errorData);
+                    $('#ResultUpload').html(errorData);
+                }
+            });
+
+       
+           
+        }
+        catch (e)
+        {
+            $('#ResultUpload').html(e);
+        }
+ 
+    }
+
+    $(document).ready(function () {
+
+        //-Envoi du bordereau à ACE VISION...
+        $('#btnEmissionOld').click(function ()
+        {
+            var codEx = $('#idListExploitation option:selected').val();
+            //pour test
+            codeEx = "021";
+            //alert("allo");
+            if(codEx !="...")
+            {
+                $("#ResultUpload").html("<span style='color:red'>fonction en ccours de réalisation... </span>");
+               
+                /*
+                    var url = "/Emission/sendData_toACEVISION";//dateDebut=" + DateDebut + "&dateFin=" + DateFin;
+                    $.ajax({
+                        url: url,
+                        type: "GET",
+                        async: false,
+                        data: { 'codeExploitation': codEx },
+                        success: function (data) {
+                            try {
+                                $('#ResultUpload').html(data);
+                            }
+                            catch (e) {
+                                alert(e)
+                            }
+
+                        },
+                        error: function (errorData) {
+                            alert(errorData);
+                            $('#ResultUpload').html(errorData);
+                        }
+                    });
+                       */
+                }
+                else
+                {
+                $('#ResultUpload').html("<span style='color:red'>Veuillez selectionner une exploitation...</span> ");
+            }
+        });
+
+        $("#idListSites").change(function ()
+        {
+            //alert("click ok");
+            getExploitataions_ofSite();
+        });
+        
+
+        $("#idListExploitation").change(function () {
+            $('#ResultUpload').html("");
+
+            if($('#idListExploitation option:selected').val()=="...")
+                $('#ResultUpload').html("Veuillez selectionner une exploitation");
+                else
+            $('#ResultUpload').html("");
+
+        });
+
+        $('#btnEmission').click(function () {
+
+
+            var url = "/Emission/getData_FromSAPHIR";//dateDebut=" + DateDebut + "&dateFin=" + DateFin;
+            $.ajax({
+                url: url,
+                type: "GET",
+                async: false,
+                data: {},
+                success: function (data) {
+                    try {
+
+                        alert(data);
+                        //$('#ResultUpload').html(data);
+                    }
+                    catch (e) {
+                        alert(e)
+                    }
+
+                },
+                error: function (errorData) {
+                    alert(errorData);
+                    $('#ResultUpload').html(errorData);
+                }
+            });
+
+            /*
+            var codEx = $('#idListExploitation option:selected').val();
+            //pour test
+            codeEx = "021";
+            //alert("allo");
+            if (codEx != "...") {
+                $("#ResultUpload").html("<span style='color:red'>fonction en ccours de réalisation... </span>");
+
+                /*
+                    var url = "/Emission/sendData_toACEVISION";//dateDebut=" + DateDebut + "&dateFin=" + DateFin;
+                    $.ajax({
+                        url: url,
+                        type: "GET",
+                        async: false,
+                        data: { 'codeExploitation': codEx },
+                        success: function (data) {
+                            try {
+                                $('#ResultUpload').html(data);
+                            }
+                            catch (e) {
+                                alert(e)
+                            }
+
+                        },
+                        error: function (errorData) {
+                            alert(errorData);
+                            $('#ResultUpload').html(errorData);
+                        }
+                    });
+                       */
+           // }
+            //else {
+                //$('#ResultUpload').html("<span style='color:red'>Veuillez selectionner une exploitation...</span> ");
+           // }
+
+            
+        });
+
+        //-------------  
+        /*
+        var url = "/Reception/CTR_ACEVSISION";//dateDebut=" + DateDebut + "&dateFin=" + DateFin;
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: false,
+            data: { 'dateDebut': DateDebut, 'dateFin': DateFin },
+            success: function (data) {
+                try {
+        
+                }
+                catch (e) {
+                    
+                }
+
+            },
+            error: function (errorData) {
+
+                $('#ResultUpload').html(errorData);
+            }
+        });
+        */
+
+    });
+
+    
+</script>
+
+<h3>Envoi des informations à ACE VISION...</h3>
+
+ <div id="ResultUpload">
+     <i style="color:red">@ViewBag.MsgErr</i>
+ </div>
+ 
+
+@* @if (@ViewBag.ListSites!=null)
+ {
+<table>
+    <tr>
+        <td>@Html.Label("SITE")</td>
+        <td>
+            @Html.DropDownList("ListSites",null,new{id="idListSites"})
+        </td>
+    </tr>
+
+    <tr>
+        <td>@Html.Label("Exploitation")</td>
+        <td>
+            <select id="idListExploitation">
+                <option value="..."></option>
+            </select>
+
+        </td>
+    </tr>
+</table>
+ 
+     
+<input type="button" id="btnEmission" value="Envoyer" />
+
+ }*@
+
+<input type="button" id="btnEmission" value="Envoyer" />

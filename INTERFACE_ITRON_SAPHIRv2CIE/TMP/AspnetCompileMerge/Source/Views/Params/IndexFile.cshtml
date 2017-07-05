@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "IndexFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .lblPath {
+    font-style:italic;
+    color:#0094ff;
+}
+</style>
+
+<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+<h2>Paramétrage Fichier des compteurs...</h2>
+ <br />
+@Html.Hidden("lblRole",(string)@ViewBag.Role)
+@Html.Hidden("txtIDParams",(string)@ViewBag.IDParams) 
+
+@*@Html.TextBox("lblRole",(string)@ViewBag.Role)*@
+  
+@*@Html.TextBox("txtPath")*@
+@*@Html.Label("lblPath")*@
+@Html.Label("lblPath", (string)@ViewBag.Path, new {@class="lblPath",id="lblPath" })
+
+                <div id="resultFile"></div>
+
+                  <div id="areaAdmin">
+                 @Html.Label("Chemin d'accès au fichier Excel")
+               @* <input type="file" id="FileUpload" onchange="selectFolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple />*@
+               @* <input type="file" id="FileUpload" name="file" />*@
+                <input type="text" id="filename" name="filename" title="Veuillez copiez-coller le chemin complet du fichier excel..."/>
+                 </div>
+
+<div id="areaAdminExcel">
+                @using (Html.BeginForm("Upload","Params"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+                    <fieldset>
+                        <legend>Registration Password</legend>
+                            <ol>
+                                  <li>
+                                      @Html.Label("Mot de passe du Fichier")</li>
+                                <li>
+                                      @Html.Password("PasswordFile")
+                                     </li>
+                                  <li>
+                                      @Html.Label("Confirmation du Mot de passe")</li>
+                                <li>
+                                      @Html.Password("ConfirmPasswordFile")
+                                      @*<p><label id="pwdError" style="color:red;visibility:visible"></label></p>*@
+
+                                  </li>
+                            </ol>
+                    
+                          
+                          </fieldset>
+                }
+          
+    </div>
+<p><label id="pwdError" style="color:red;visibility:visible"></label></p>
+
+<input type="button" value="Enregistrer" name="btnFile" id="btnFile" />
+
+<script src="~/Scripts/Gle/JSParams.js"></script>
+<script src="~/Scripts/BootStrap/jquery.toaster.js"></script>

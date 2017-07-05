@@ -1,0 +1,187 @@
+
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007243 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT PISA IMPEX / 03220901 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 - COMPTEUR DEJA ASSOCIE A UN AUTRE CLIENT : JMK PRESSING / 03224420 : ERREUR LORS DE L'AFFECTATION COMPTEUR , COMPTEUR  33007149 , appartenant Déjà  au client JMK PRESSING / 03224420 
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007243 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT PISA IMPEX / 03220901 INEXISTANT   | Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : ERREUR LORS DE L'AFFECTATION COMPTEUR , COMPTEUR  33007149 , appartenant Déjà  au client JMK PRESSING / 03224420  | Message : ECHEC RACCORDEMENT/ABONNEMENT  SiteExploitation :032032 : CREATION D'UN COMPTEUR : DatabaseAccessRejected 
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RESILIATION   SiteExploitation :032032 : COMPTEUR 53062501, ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT SAFIR / 03220011 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 - COMPTEUR 36118302 ,ANCIEN IDABON 03222801 ne CORRESPONDANT PAS A LA VALEUR ACE VISION 03219002 
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007191 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT GEO-FIBRE CI / 03225761 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RESILIATION   SiteExploitation :032032 : COMPTEUR 68024877, ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT AFRIBETON / 03225260 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007243 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT PISA IMPEX / 03220901 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RESILIATION   SiteExploitation :032032 : COMPTEUR 68024826, ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT SONACO / 03220501 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RE-ABONNEMENT  SiteExploitation :032032 : ANCIEN COMPTEUR 68024879  NON DISPONIBLE
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 53087777 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT ZENITH PLASTICS  YOP / 03211001 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 63007153 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT M I P A / 03220201 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 36115409 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT C.G.C.-CI / 03227781 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 14:16  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RE-ABONNEMENT  SiteExploitation :032032 - COMPTEUR DEJA ASSOCIE A UN AUTRE CLIENT : ETS MARCOS / 03221251 : ERREUR LORS DE L'AFFECTATION COMPTEUR , COMPTEUR  66005658  , appartenant Déjà  au client ETS MARCOS / 03221251 
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007243 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT PISA IMPEX / 03220901 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 - COMPTEUR DEJA ASSOCIE A UN AUTRE CLIENT : JMK PRESSING / 03224420 : ERREUR LORS DE L'AFFECTATION COMPTEUR , COMPTEUR  33007149 , appartenant Déjà  au client JMK PRESSING / 03224420 
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007243 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT PISA IMPEX / 03220901 INEXISTANT   | Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : ERREUR LORS DE L'AFFECTATION COMPTEUR , COMPTEUR  33007149 , appartenant Déjà  au client JMK PRESSING / 03224420  | Message : ECHEC RACCORDEMENT/ABONNEMENT  SiteExploitation :032032 : CREATION D'UN COMPTEUR : DatabaseAccessRejected 
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RESILIATION   SiteExploitation :032032 : COMPTEUR 53062501, ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT SAFIR / 03220011 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 - COMPTEUR 36118302 ,ANCIEN IDABON 03222801 ne CORRESPONDANT PAS A LA VALEUR ACE VISION 03219002 
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007191 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT GEO-FIBRE CI / 03225761 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RESILIATION   SiteExploitation :032032 : COMPTEUR 68024877, ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT AFRIBETON / 03225260 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC REMPLACEMENT COMPTEUR (S)  SiteExploitation :032032 : COMPTEUR 33007243 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT PISA IMPEX / 03220901 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RESILIATION   SiteExploitation :032032 : COMPTEUR 68024826, ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT SONACO / 03220501 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RE-ABONNEMENT  SiteExploitation :032032 : ANCIEN COMPTEUR 68024879  NON DISPONIBLE
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 53087777 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT ZENITH PLASTICS  YOP / 03211001 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 63007153 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT M I P A / 03220201 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 36115409 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT C.G.C.-CI / 03227781 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 17:46  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RE-ABONNEMENT  SiteExploitation :032032 - COMPTEUR DEJA ASSOCIE A UN AUTRE CLIENT : ETS MARCOS / 03221251 : ERREUR LORS DE L'AFFECTATION COMPTEUR , COMPTEUR  66005658  , appartenant Déjà  au client ETS MARCOS / 03221251 
+Alerte: ERROR 
+DATE: 04/07/2017 20:51  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 53087777 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT ZENITH PLASTICS  YOP / 03211001 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 20:55  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC VARIATION PUISSANCE  SiteExploitation :032032 : COMPTEUR 53087777 , ERREUR LORS DE LA RECHERCHE DU CLIENT , CLIENT ZENITH PLASTICS  YOP / 03211001 INEXISTANT  
+Alerte: ERROR 
+DATE: 04/07/2017 21:19  Autheur: GSEW0263\FHCOULIBALY 
+PeriodeFacturation: N/A 
+Type Traitement : Emission - Flux entrant Ace Vision 
+Mode Execution: Mode Manuel   
+Message : ECHEC RACCORDEMENT/ABONNEMENT  SiteExploitation :032032 : CREATION D'UN COMPTEUR : DatabaseAccessRejected 

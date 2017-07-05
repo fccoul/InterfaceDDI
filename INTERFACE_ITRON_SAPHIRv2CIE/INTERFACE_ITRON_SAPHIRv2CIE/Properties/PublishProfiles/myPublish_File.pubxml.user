@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Application\ITRON\Publish\WEB</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/INTERFACE_ITRON_SAPHIRv2CIE.dll">
+      <publishTime>12/14/2016 19:40:38</publishTime>
+    </File>
+    <File Include="Content/BootStrap/bootstrap-theme.min.css">
+      <publishTime>12/08/2016 16:39:46</publishTime>
+    </File>
+    <File Include="Content/BootStrap/bootstrap.min.css">
+      <publishTime>12/13/2016 23:20:14</publishTime>
+    </File>
+    <File Include="Content/BootStrap/ie10-viewport-bug-workaround.css">
+      <publishTime>12/08/2016 16:39:46</publishTime>
+    </File>
+    <File Include="Content/BootStrap/signin.css">
+      <publishTime>12/08/2016 17:01:01</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/Thumbs.db">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-icons_222222_256x240.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-icons_228ef1_256x240.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/images/ui-icons_ffffff_256x240.png">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/jquery-ui-1.10.0.custom.css">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/DatePicker/jquery-ui-1.10.0.custom.min.css">
+      <publishTime>10/26/2015 09:28:05</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/back.jpg">
+      <publishTime>10/12/2015 09:06:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/border.png">
+      <publishTime>10/12/2015 09:06:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/Home_DDI.png">
+      <publishTime>10/12/2015 09:06:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/left.gif">
+      <publishTime>10/12/2015 11:45:31</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/left.png">
+      <publishTime>10/12/2015 09:06:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/right.gif">
+      <publishTime>10/12/2015 11:25:25</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/right.png">
+      <publishTime>10/12/2015 11:25:25</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/selected-left-sub.png">
+      <publishTime>10/12/2015 09:06:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/selected-right-sub.png">
+      <publishTime>10/12/2015 11:34:59</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/submenu-bottom.gif">
+      <publishTime>10/12/2015 11:46:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/submenu-bottom.png">
+      <publishTime>10/12/2015 11:46:48</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/submenu-pointer-hover.gif">
+      <publishTime>10/12/2015 09:06:49</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/submenu-pointer.gif">
+      <publishTime>10/12/2015 09:06:49</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/submenu-pointer.png">
+      <publishTime>10/12/2015 09:06:49</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/subsubmenu-top.gif">
+      <publishTime>10/12/2015 11:46:16</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/images/subsubmenu-top.png">
+      <publishTime>10/12/2015 11:46:16</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/menu.css">
+      <publishTime>12/12/2016 18:54:59</publishTime>
+    </File>
+    <File Include="Content/CSS/Menu/WidgetLogin.css">
+      <publishTime>12/13/2016 22:50:13</publishTime>
+    </File>
+    <File Include="Content/CSS/Progress/prelude.css">
+      <publishTime>09/23/2015 18:12:07</publishTime>
+    </File>
+    <File Include="Content/CSS/Progress/progress.css">
+      <publishTime>09/23/2015 18:11:13</publishTime>
+    </File>
+    <File Include="Content/CSS/Progress/rainbow.css">
+      <publishTime>09/23/2015 18:12:07</publishTime>
+    </File>
+    <File Include="Content/dataTables/back_disabled.jpg">
+      <publishTime>10/13/2015 19:09:56</publishTime>
+    </File>
+    <File Include="Content/dataTables/back_enabled.jpg">
+      <publishTime>10/13/2015 19:09:56</publishTime>
+    </File>
+    <File Include="Content/dataTables/demo_page.css">
+      <publishTime>10/13/2015 18:00:15</publishTime>
+    </File>
+    <File Include="Content/dataTables/demo_table.css">
+      <publishTime>10/18/2015 15:32:16</publishTime>
+    </File>
+    <File Include="Content/dataTables/demo_table_jui.css">
+      <publishTime>10/13/2015 18:00:15</publishTime>
+    </File>
+    <File Include="Content/dataTables/forward_disabled.jpg">
+      <publishTime>10/13/2015 19:09:56</publishTime>
+    </File>
+    <File Include="Content/dataTables/forward_enabled.jpg">
+      <publishTime>10/13/2015 19:09:56</publishTime>
+    </File>
+    <File Include="Content/dataTables/jquery.dataTables.min.css">
+      <publishTime>10/13/2015 14:47:11</publishTime>
+    </File>
+    <File Include="Content/dataTables/other/JQ_dataTableLog.css">
+      <publishTime>10/19/2015 13:32:43</publishTime>
+    </File>
+    <File Include="Content/Gridmvc.css">
+      <publishTime>12/11/2016 22:06:38</publishTime>
+    </File>
+    <File Include="Content/images/back_disabled.jpg">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/back_enabled.jpg">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/ctr_Itron.jpg">
+      <publishTime>09/18/2015 11:21:45</publishTime>
+    </File>
+    <File Include="Content/images/details_close.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/details_open.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/favicon.ico">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/forward_disabled.jpg">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/forward_enabled.jpg">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/loading.gif">
+      <publishTime>09/17/2015 10:38:43</publishTime>
+    </File>
+    <File Include="Content/images/loading2.gif">
+      <publishTime>10/11/2015 12:14:25</publishTime>
+    </File>
+    <File Include="Content/images/loading3.gif">
+      <publishTime>10/11/2015 12:18:38</publishTime>
+    </File>
+    <File Include="Content/images/LogoCIE.jpg">
+      <publishTime>09/18/2015 05:13:01</publishTime>
+    </File>
+    <File Include="Content/images/logo_cie.png">
+      <publishTime>10/12/2015 09:56:01</publishTime>
+    </File>
+    <File Include="Content/images/Minus.png">
+      <publishTime>10/12/2015 14:48:46</publishTime>
+    </File>
+    <File Include="Content/images/Plus.png">
+      <publishTime>10/12/2015 14:48:46</publishTime>
+    </File>
+    <File Include="Content/images/sort_asc.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/sort_asc_disabled.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/sort_both.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/sort_desc.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/images/sort_desc_disabled.png">
+      <publishTime>10/13/2015 16:47:24</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="DLL/INOVA.ISF.DATACESS.dll">
+      <publishTime>11/10/2015 13:06:46</publishTime>
+    </File>
+    <File Include="DLL/Ionic.Zip.dll">
+      <publishTime>12/06/2016 12:25:02</publishTime>
+    </File>
+    <File Include="DLL/Microsoft.SqlServer.ConnectionInfo.dll">
+      <publishTime>11/10/2015 13:00:06</publishTime>
+    </File>
+    <File Include="DLL/Microsoft.SqlServer.Management.Sdk.Sfc.dll">
+      <publishTime>11/10/2015 13:00:06</publishTime>
+    </File>
+    <File Include="DLL/Microsoft.SqlServer.Smo.dll">
+      <publishTime>11/10/2015 13:00:06</publishTime>
+    </File>
+    <File Include="DLL/Microsoft.SqlServer.SqlClrProvider.dll">
+      <publishTime>11/11/2015 11:32:30</publishTime>
+    </File>
+    <File Include="DLL/Microsoft.SqlServer.SqlEnum.dll">
+      <publishTime>11/10/2015 13:00:10</publishTime>
+    </File>
+    <File Include="DLL/NPOI.dll">
+      <publishTime>12/06/2016 12:25:02</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/15/2015 09:09:42</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/15/2015 09:09:42</publishTime>
+    </File>
+    <File Include="Grid.mvc.readme">
+      <publishTime>12/11/2016 21:41:13</publishTime>
+    </File>
+    <File Include="Images/1229279_orig.png">
+      <publishTime>12/12/2016 03:08:47</publishTime>
+    </File>
+    <File Include="Images/add-file-256.png">
+      <publishTime>12/12/2016 02:36:37</publishTime>
+    </File>
+    <File Include="Images/add-link-256.png">
+      <publishTime>12/12/2016 02:36:37</publishTime>
+    </File>
+    <File Include="Images/add-user-2-xxl.png">
+      <publishTime>12/12/2016 02:28:35</publishTime>
+    </File>
+    <File Include="Images/back.png">
+      <publishTime>12/12/2016 02:36:37</publishTime>
+    </File>
+    <File Include="Images/broken-link-xxl.png">
+      <publishTime>12/12/2016 03:08:47</publishTime>
+    </File>
+    <File Include="Images/edit-user-512.gif">
+      <publishTime>12/12/2016 03:08:47</publishTime>
+    </File>
+    <File Include="Images/excel.png">
+      <publishTime>12/06/2016 18:00:24</publishTime>
+    </File>
+    <File Include="Images/print.jpg">
+      <publishTime>12/06/2016 18:30:18</publishTime>
+    </File>
+    <File Include="Images/purchase-order-xxl.png">
+      <publishTime>12/12/2016 02:36:37</publishTime>
+    </File>
+    <File Include="Images/Role.jpg">
+      <publishTime>12/12/2016 03:14:05</publishTime>
+    </File>
+    <File Include="Images/Safeguarding-Policy-Icon.png">
+      <publishTime>12/12/2016 02:36:37</publishTime>
+    </File>
+    <File Include="Scripts/BootStrap/Administration.js">
+      <publishTime>12/14/2016 02:17:27</publishTime>
+    </File>
+    <File Include="Scripts/BootStrap/bootstrap.js">
+      <publishTime>12/08/2016 16:38:53</publishTime>
+    </File>
+    <File Include="Scripts/BootStrap/bootstrap.min.js">
+      <publishTime>12/08/2016 16:38:53</publishTime>
+    </File>
+    <File Include="Scripts/BootStrap/ie-emulation-modes-warning.js">
+      <publishTime>12/08/2016 16:38:53</publishTime>
+    </File>
+    <File Include="Scripts/BootStrap/jquery.toaster.js">
+      <publishTime>12/12/2016 12:04:51</publishTime>
+    </File>
+    <File Include="Scripts/BootStrap/lumino.glyphs.js">
+      <publishTime>12/13/2016 22:45:06</publishTime>
+    </File>
+    <File Include="Scripts/Calendar/jquery-ui-1.9.2.custom.js">
+      <publishTime>09/18/2015 08:33:05</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/buttons.dataTables.min.css">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/buttons.flash.min.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/buttons.html5.min.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/buttons.print.min.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/dataTables.buttons.min.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/JSPrint.js">
+      <publishTime>12/14/2016 12:34:54</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/JSPrintReception.js">
+      <publishTime>12/08/2016 15:25:51</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/jszip.min.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/pdfmake.min.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/Export/vfs_fonts.js">
+      <publishTime>12/06/2016 10:28:06</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/jquery-1.11.3.min.js">
+      <publishTime>09/18/2015 04:33:15</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/jquery.dataTables.min.js">
+      <publishTime>10/12/2015 12:38:17</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/other/jquery.dataTables.min.js">
+      <publishTime>10/18/2015 16:16:11</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/other/jquery.dataTables.minNew.js">
+      <publishTime>12/06/2016 11:10:49</publishTime>
+    </File>
+    <File Include="Scripts/DataTable/other/JQ_dataTabeLog.js">
+      <publishTime>10/19/2015 13:26:01</publishTime>
+    </File>
+    <File Include="Scripts/Gle/html5.js">
+      <publishTime>12/13/2016 23:30:05</publishTime>
+    </File>
+    <File Include="Scripts/Gle/jquery-ui.custom.js">
+      <publishTime>10/28/2015 15:12:52</publishTime>
+    </File>
+    <File Include="Scripts/Gle/jquery.js">
+      <publishTime>10/26/2015 09:04:21</publishTime>
+    </File>
+    <File Include="Scripts/Gle/JSParams.js">
+      <publishTime>12/13/2016 16:30:22</publishTime>
+    </File>
+    <File Include="Scripts/Gle/modernizr.js">
+      <publishTime>10/26/2015 09:05:22</publishTime>
+    </File>
+    <File Include="Scripts/Gle/moment.js">
+      <publishTime>12/07/2016 16:45:43</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.js">
+      <publishTime>12/11/2016 21:41:13</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.lang.ru.js">
+      <publishTime>12/11/2016 21:41:13</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.min.js">
+      <publishTime>12/11/2016 21:41:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.min.js">
+      <publishTime>09/15/2015 09:09:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.js">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.min.js">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.css">
+      <publishTime>10/12/2015 14:09:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>10/12/2015 13:01:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>09/15/2015 09:10:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>09/15/2015 09:10:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/15/2015 09:10:03</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.1.0.debug.js">
+      <publishTime>09/15/2015 09:10:08</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.1.0.js">
+      <publishTime>09/15/2015 09:10:08</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.5.3.js">
+      <publishTime>09/15/2015 09:10:04</publishTime>
+    </File>
+    <File Include="Scripts/Progress/jquery-asPieProgress.js">
+      <publishTime>09/23/2015 18:10:43</publishTime>
+    </File>
+    <File Include="Scripts/Progress/jquery.min.js">
+      <publishTime>09/24/2015 15:43:52</publishTime>
+    </File>
+    <File Include="Scripts/Progress/rainbow.min.js">
+      <publishTime>09/23/2015 18:12:24</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addCustomerResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addMeterGroupResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addMeterResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addMeterToMeterGroupResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.authenticateResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOAbnormalConsumption.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOAuth.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOChannel.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOCustomer.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOCustomerGroup.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTODetailedMeasure.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEndOfBilling.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEndOfBillingIdentifier.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEnumWebServiceReturnCode.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEvent.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOInstantaneous.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOInstantaneousIdentifier.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOIsolationVoltage.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLastPush.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLoadProfile.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLoadProfileConfig.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLogBook.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLogin.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeasure.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeasuresRequest.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeter.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterCheckConfig.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterGroup.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterHistory.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterIdentifier.datasource">
+      <publishTime>11/16/2016 13:07:06</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterStop.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterSummation.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTONetworkDeparture.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTONetworkLevel.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTONetworkPost.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOObjectCreationReturn.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOPortableTerminal.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOProduction.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOProductionType.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOProductionTypeCategory.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOPushDecisionHelper.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOPushLastRatio.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOScheduler.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOStatusWord.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOStatusWordIdentifier.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTampering.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingCoverOpening.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingCTVTRatioProgramming.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingCurrentReversal.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingDayProfile.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingIndex.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingSeason.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingUserConnections.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOVoltageQualityHistory.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOVoltageQualitySummary.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOVoltageQualityTHDDefectHistory.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOWaveform.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOWaveformIdentifier.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getAbnormalConsumptionResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getAllLoginInformationResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getAllPortableTerminalsResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getChannelByIdResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getChannelsFromLoadProfileConfigIdResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerByIdResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerGroupByIdResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerGroupsByNameResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerGroupsResponse.datasource">
+      <publishTime>11/16/2016 13:07:08</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersByAccountNumberResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersByNameFilterResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersByNameResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+    <File Include="Service References/ACEVISIONWebService/INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersResponse.datasource">
+      <publishTime>11/16/2016 13:07:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

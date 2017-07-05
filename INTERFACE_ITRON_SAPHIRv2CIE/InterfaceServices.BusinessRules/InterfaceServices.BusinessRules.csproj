@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CED7963B-D875-4BD8-BB06-3268B4FE0BEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InterfaceServices.BusinessRules</RootNamespace>
+    <AssemblyName>InterfaceServices.BusinessRules</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="INOVA.ISF.DATACESS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869499e6a6c61972, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>H:\ACEVSION\DLL\INOVA.ISF.DATACESS.dll</HintPath>
+    </Reference>
+    <Reference Include="ISF.DEPLOIEMENT.COMMON, Version=1.0.0.0, Culture=neutral, PublicKeyToken=08928e5b5dbb49fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\INTERFACE_ITRON_SAPHIRv2CIE\DLL\ISF.DEPLOIEMENT.COMMON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL.cs" />
+    <Compile Include="CompteurRules.cs" />
+    <Compile Include="EmissionRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceptionRules.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACEVISION.Common\ACEVISION.Common.csproj">
+      <Project>{946cc9e5-ba41-470a-baba-59fd2f3ffacc}</Project>
+      <Name>ACEVISION.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceServices.DTO\InterfaceServices.DTO.csproj">
+      <Project>{e3bbb321-fb11-4802-bcf0-41984a01048b}</Project>
+      <Name>InterfaceServices.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceServices.SAPHIRCOMDataAccess\InterfaceServices.SAPHIRCOMDataAccess.csproj">
+      <Project>{170cd15b-7e58-4784-b94c-de7582bae84a}</Project>
+      <Name>InterfaceServices.SAPHIRCOMDataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

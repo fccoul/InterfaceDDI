@@ -1,0 +1,17 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<hgroup class="title">
+    <h1 class="error">Erreur !.</h1>
+    @if(ViewBag.FileExcel==null)
+    {
+    <h2 class="error">une erreur s'est produite lors du traitement de votre demande ! Veuillez contactez votre administrateur !</h2>
+    }
+    else
+    {
+         <h2 class="error">Le Fichier des compteurs HT est n'est pas configuré sur le serveur ! Contactez votre administrateur , pour  le paramétrer avant execution de cette demande ! </h2>
+    }
+</hgroup>

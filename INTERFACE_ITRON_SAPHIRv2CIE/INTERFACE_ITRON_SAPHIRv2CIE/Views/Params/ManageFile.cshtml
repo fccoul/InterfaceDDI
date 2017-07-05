@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "ManageFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+  .submit-progress-bg {
+    background-color: lightgray;
+    opacity: .5;
+  }
+.submit-progress {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 6em;
+  padding-top: 2.3em;
+  /* The following rules are the
+     ones most likely to change */
+  width: 20em;
+  /* Set 'margin-left' to a negative number
+     that is 1/2 of 'width' */
+  margin-left: -10em;
+  padding-left: 2.1em;
+  background-color:#2391b0;
+  color: white;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em;
+  box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+  -moz-box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+}
+.submit-progress i {
+  margin-right: 0.5em;
+}
+
+/*me 24042017*/
+.modalWindow{position:fixed;font-family:arial;font-size:80%;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.2);z-index:99999;opacity:0;-webkit-transition:opacity 400ms ease-in;-moz-transition:opacity 400ms ease-in;transition:opacity 400ms ease-in;pointer-events:none;}.modalHeader h4{color:#189CDA;border-bottom:2px groove #efefef;}.modalWindow:target{opacity:1;pointer-events:auto;}.modalWindow>div{width:550px;position:relative;margin:10% auto;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background:#fff;}.modalWindow .modalHeader{padding:5px 20px 0px 20px;}.modalWindow .modalContent{padding:0px 20px 5px 20px;}.modalWindow .modalFooter{padding:8px 20px 8px 20px;}.modalFooter{background:#F1F1F1;border-top:1px solid #999;-moz-box-shadow:inset 0px 13px 12px -14px #888;-webkit-box-shadow:inset 0px 13px 12px -14px #888;box-shadow:inset 0px 13px 12px -14px #888;}.modalFooter p{color:#D4482D;text-align:right;margin:0;padding:5px;}.ok,.close,.cancel{background:#f1bb24;color:#FFFFFF;line-height:25px;text-align:center;text-decoration:none;font-weight:bold;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 1px 3px #000;-webkit-box-shadow:1px 1px 3px #000;box-shadow:1px 1px 3px #000;}.close{position:absolute;right:5px;top:5px;width:22px;height:22px;font-size:10px;}.ok,.cancel{width:80px;float:right;margin-left:20px;}.ok:hover{background:#24baca;}.close:hover,.cancel:hover{background:#24baca;}.clear{float:none;clear:both;}
+ h4{color:#189CDA;border-bottom:2px groove #efefef;}
+
+    .fco {
+        background:#F1F1F1;border-top:1px solid #999;
+        -moz-box-shadow:inset 0px 13px 12px -14px #888;
+        -webkit-box-shadow:inset 0px 13px 12px -14px #888;
+        box-shadow:inset 0px 13px 12px -14px #888;
+
+        color:#D4482D;text-align:right;margin:0;padding:5px;
+    }
+    
+</style>
+<link href="~/Content/Kendo/kendo.common.min.css" rel="stylesheet" />
+<link href="~/Content/Kendo/kendo.default.min.css" rel="stylesheet" />
+
+<h2>Gestion des informations utiles des compteurs HT...</h2>
+
+ 
+
+@using (Html.BeginForm("SaveContent","Params",
+                        FormMethod.Post,new {enctype = "multipart/form-data" }))
+{
+    <div id="ResultOperation">
+       @* @ViewBag.MsgEndTransaction *@
+        @if (TempData["MsgEndTransaction"] != null )
+        {
+            if(TempData["MsgEndTransaction"].ToString().Contains("Echec"))
+            {
+            <span style="color:red;font-weight:bold;font-style:italic"> @TempData["MsgEndTransaction"]</span>
+              
+            }
+            else
+            {
+            <span style="color:green;font-weight:bold;font-style:italic"> @TempData["MsgEndTransaction"]</span>
+            
+            }
+            <a href="/Log/LogIntegrationCtr">Voir details<img src="~/Images/seeDetails.png " width="50" /></a>
+        }
+     
+    </div>
+   <div id="fileUpload">
+       <!--hiddeen-->
+       <input type="hidden" value="abc455" id="valPwd" name="valPwd" />
+        <table style="border:none"><tr>
+            <td>
+                   <i>Veuillez selectionnez le fichier crypté des compteurs HT <input type="file" id="file" name="file"/></i>
+            </td>
+            <td><br />
+                <input type="submit" id="btnIntegrate" value="Enregistrer" style="margin:0px 30px"  onclick="return DisplayProgressMessage('this', 'msg')" />
+                 <input type="button" id="btnAfficher" value="Afficher" style="margin:0px 30px;visibility:hidden"  />
+
+            </td></tr></table>
+     
+    
+    </div>
+
+       
+  
+}
+
+<div class="submit-progress hidden">
+    <i class="fa fa-refresh fa-spin"></i>
+ <label>Traitement en cours...</label>
+</div>
+
+<div id="GridResult"></div>
+
+
+<input type="button" value="Excel" onclick="DisplayPrompt()" hidden="hidden" />
+<a href="#divPwdFiles" id="IdivPwdFiles" hidden="hidden">Click me to open modal window</a>
+@*<a href="#" id="IdivPwdFiles" >Click me to open modal window</a>*@
+@*<a href="#" id="IdivPwdFiles" data-target="#divPwdFiles">Click me to open modal window</a>*@
+
+@*<div id="divPwdFiles" class="modalWindow">*@
+@*<div id="divPwdFiles" class=" fade modalWindow" aria-hidden="true">*@ 
+@*<div id="divPwdFiles" class="modalWindow" aria-hidden="true">*@
+<div id="divPwdFiles" class="modal">
+   @* <div class="modal-body">*@
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h4>
+                        <img src="~/Images/ExcelProteced.jpg" width="35" height="35" />&nbsp;&nbsp;Veuillez saisir le mot de passe d'ouverture du fichier !</h4>
+                    <a href="#close" title="Fermer" class="close" data-dismiss="modal" onclick="javascript:resetValue();">X</a>
+                </div>
+
+                <div class="modal-body">
+                    <div id="divEmpty" style="color:red;font-style:italic"></div>
+                 <b>Mot de Passe :  </b><input type="password" id="pwdFile" />
+                 @*<input type="button" value="Valider" />*@
+                 </div>
+
+               <div class="modal-footer fco">
+                <a href="#cancel" title="Annuler" class="cancel" data-dismiss="modal" onclick="javascript:resetValue();">Annuler</a>
+                <a href="#ok" id="#applik" title="Appliquer" class="ok" onclick="javascript:setValue();">Appliquer</a>
+        
+               <div class="clear">
+             </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+ 
+
+<script src="~/Scripts/Kendo/kendo.all.min.js"></script>
+<script src="~/Scripts/Gle/JSFileAdmin.js"></script>
+<script src="~/Scripts/BootStrap/bootstrap.min.js"></script>
+
+ 

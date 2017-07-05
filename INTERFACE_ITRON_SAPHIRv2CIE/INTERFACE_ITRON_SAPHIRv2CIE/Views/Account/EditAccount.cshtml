@@ -1,0 +1,49 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Models.RegisterModel
+
+@{
+    ViewBag.Title = "EditAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Modification du compte...</h2>
+<br />
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false)
+
+   @Html.Hidden("idUser",(string)@ViewBag.IDUser)
+ 
+   
+    <fieldset>
+        <legend>RegisterModel</legend>
+
+        <div class="editor-label">
+            @Html.Label("Compte Utilisateur")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserName)
+           @* @Html.ValidationMessageFor(model => model.UserName)*@
+        </div>
+         <div class="editor-label">
+            @Html.Label("Adresse Electronique")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailID)
+           @* @Html.ValidationMessageFor(model => model.UserName)*@
+        </div>
+
+        
+        <p>
+            <input type="submit" value="Enregistrer" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    <a href="@Url.Action("DisplayAllUsers")">
+        <img src="~/Images/back.png" width="40" height="40" /></a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

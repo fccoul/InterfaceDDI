@@ -1,0 +1,72 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Common.UserForm
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Connecter</title>
+
+    <link href="~/Content/BootStrap/signin.css" rel="stylesheet" />
+   <link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+   <link href="@Url.Content("~/Content/BootStrap/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+
+    <script src="~/Scripts/DataTable/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/BootStrap/Administration.js"></script>
+</head>
+<body>
+    <script>document.body.className += 'fade-out';</script>
+
+     <div class="container" id="idContainer">
+
+         <p align="center" style="font-family:'Segoe Marker';font-weight:lighter;font-size:x-large;color:orange">
+             <img src="~/Content/images/LogoCIE.jpg" />&nbsp;&nbsp;&nbsp;Interface SAPHIR / ACE VISION</p>
+        @*<form class="form-signin" >*@
+
+         @using (Html.BeginForm("Connecter", "Connexion", FormMethod.Post, new { @class = "form-signin" }))
+         {    
+            @Html.ValidationSummary(false, "", new { @style="color:red"})
+
+           
+             
+                @* <input type="text" id="txtUser" class="form-control" placeholder="Login"  runat="server"  oninvalid="InvalidMsgLogin(this,1);" oninput="InvalidMsgLogin(this,1);"
+	                    required="required" autofocus />
+
+             <input type="text" id="txtUser" class="form-control" placeholder="Login"  required="required" autofocus />*@
+             
+              @Html.TextBoxFor(m => m.Login, new { @class = "form-control", placeholder = Html.DisplayNameFor(n => n.Login) })
+                @*@Html.ValidationMessageFor(m => m.Login)*@
+		 
+         <br />
+                @* <input type="password" id="txtMoDp" class="form-control" placeholder="Mot de passe" oninvalid="InvalidMsgLogin(this,2);" oninput="InvalidMsgLogin(this,2);" 
+                     required="required" runat="server" />
+
+             <input type="password" id="txtMoDp" class="form-control" placeholder="Mot de passe" required="required"  />*@
+             
+             @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = Html.DisplayName("Mot de Passe") })
+                @*@Html.ValidationMessageFor(m => m.Password)*@
+         
+             <br />
+                @*<input class="btn btn-lg btn-primary btn-block" type="button" id="BtnConnexion" value="Se connecter" *@
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Se connecter"
+             
+                   />
+             
+               @Html.ActionLink("Paramétrage base de données", "Index", "Admin",null, new { @style="color:white"})
+
+         }
+
+         
+      @*</form>*@
+
+     </div> 
+
+  
+
+</body>
+ 
+</html>

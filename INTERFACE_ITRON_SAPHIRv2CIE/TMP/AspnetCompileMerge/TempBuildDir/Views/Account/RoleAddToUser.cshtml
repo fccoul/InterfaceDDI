@@ -1,0 +1,68 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Models.AssignRoleVM
+
+@{
+    ViewBag.Title = "RoleAddToUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/BootStrap/bootstrap.min.js"></script>
+
+<h2>Affectation Profil / Compte Utilisateur</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false)
+    <div>
+        @{string valReturn=(string)@ViewBag.ResultMessage;}
+        @if (!string.IsNullOrEmpty(valReturn) && valReturn.Contains("Succes"))
+        {
+            <p style="color:green">@ViewBag.ResultMessage</p>
+        }else{
+           <p style="color:red">@ViewBag.ResultMessage</p>
+        }
+
+</div>
+    <fieldset>
+        <legend>AssignRoleVM</legend>
+
+        <div class="editor-label">
+            @*@Html.LabelFor(model => model.RoleName)*@
+              @Html.Label("Profil")
+        </div>
+        <div class="editor-field">
+          @Html.DropDownListFor(m => m.RoleName, new SelectList(Model.RolesList, "Value", "Text"),
+new { style = "width:200px", @class = "form-control" })
+@*@Html.ValidationMessageFor(model => model.RoleName)*@
+        </div>
+
+        <div class="editor-label">
+            @*@Html.LabelFor(model => model.UserID)*@
+            @Html.Label("Compte Utilisateur")
+        </div>
+        <div class="editor-field">
+           @Html.DropDownListFor(m => m.UserID, new SelectList(Model.Userlist, "Value", "Text"),
+new { style = "width:200px", @class = "form-control" })
+@*@Html.ValidationMessageFor(model => model.UserID)*@
+        </div>
+        <br />
+        <p>
+            <input type="submit" value="Enregistrer" />
+        </p>
+    </fieldset>
+}
+
+<div>
+
+    <a href="@Url.Action("DisplayAllUserroles")">
+     @*<img src="yourImageSource" style="vertical-align: middle; width: 30px;"> Grid View*@
+        <img src="~/Images/back.png" width="40" height="40" />
+</a>
+  
+    
+ 
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

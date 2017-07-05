@@ -1,0 +1,151 @@
+﻿@model IEnumerable<InterfaceServices.DTO.LogEmissionDTO>
+
+@{
+    ViewBag.Title = "LogIntegration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    <link href="~/Content/dataTables/other/JQ_dataTableLog.css" rel="stylesheet" />
+}
+
+@section scripts
+{
+    <script src="~/Scripts/DataTable/other/JQ_dataTabeLog.js"></script>
+}
+<script>
+    $(document).ready(function () {
+        var table = $('#tbLogIntegration').DataTable({
+            "columnDefs": [
+                { "visible": false, "targets": 7 }
+            ],
+            "order": [[0, 'desc']], //tri par ordre decroissant de date d'execution...
+            "displayLength": 10,
+            "drawCallback": function (settings) {
+                var api = this.api();
+                var rows = api.rows({ page: 'current' }).nodes();
+                var last = null;
+
+                //---column a grouper...
+                //8==execution ID
+                //Perfact - date Execution - execution ID
+                api.column(7, { page: 'current' }).data().each(function (group, i) {
+                    if (last !== group) {
+                        $(rows).eq(i).before(
+                            '<tr class="group"><td colspan="7">Execution N° : ' + group + '</td></tr>'
+                            //'<tr class="group"><td colspan="8">Lancement {1}</td></tr>'
+                            //'<tr class="group"><td colspan="8">'+i+'</td></tr>'
+                           // '<tr class="group"><td colspan="9"> Execution N° : '+ rows[i].cells[8].innerText+'</td></tr>'
+                        );
+
+                        last = group;
+                    }
+                });
+            }
+        });
+
+        // Order by the grouping      
+        //-tri sur le nombre d'execution ...
+        $('#tbLogIntegration tbody').on('click', 'tr.group', function () {
+            var currentOrder = table.order()[0];
+            if (currentOrder[0] === 7 && currentOrder[1] === 'asc') {
+                table.order([7, 'desc']).draw();
+            }
+            else {
+                table.order([7, 'asc']).draw();
+            }
+        });
+        
+    });
+</script>
+<h2>Log - Integration Nouveau Site</h2>
+@* <h3><i> Données en provenance de SAPHIR...</i></h3>*@
+
+ <br />
+@**@
+<div class="Scroll">
+    <table id="tbLogIntegration" class="display" cellspacing="0" width="1000px"  >
+@*<table id="tbLogReceptionss"  cellspacing="0"  >*@
+    <thead>
+       <tr>
+                    
+        @*<th>
+            @Html.DisplayName("Facturation")
+        </th>*@
+        <th>
+            @Html.DisplayName("Date d'execution")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Auteur)
+        </th>
+        <th>
+            @Html.DisplayName("Type")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayName("Lecture")
+        </th>
+        <th>
+            @Html.DisplayName("Ecriture")
+        </th>
+        <th>
+            @Html.DisplayName("Execution")
+        </th>
+
+       @* <th>
+            @Html.DisplayNameFor(model => model.ExecutionID)
+        </th>*@
+         <th>
+            @Html.DisplayName("Cpt")
+        </th>
+        
+    </tr>
+   </thead>
+
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+                 
+     @*   <td>
+            @Html.DisplayFor(modelItem => item.PeriodeFacturation)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.DateExecution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Auteur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Niveau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.TotalRead_fromAce)*@
+            @Html.DisplayFor(modelItem => item.TotalRead_fromNode)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.TotalInserted_toNode)*@
+            @Html.DisplayFor(modelItem => item.TotalInserted_toAce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExecutionMode)
+        </td>
+
+       @* <td>
+            @Html.DisplayFor(modelItem => item.ExecutionID)
+        </td>*@
+        <td >
+            @Html.DisplayFor(modelItem => item.CptExecution)
+        </td>
+      
+    </tr>
+}
+    </tbody>
+</table>
+    
+</div>

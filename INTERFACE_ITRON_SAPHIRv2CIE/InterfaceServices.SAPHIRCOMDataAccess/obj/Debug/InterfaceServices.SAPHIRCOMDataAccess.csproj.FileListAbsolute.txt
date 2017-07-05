@@ -1,0 +1,28 @@
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll.config
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\log4net.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ACEVISION.Common.pdb
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+E:\Application\ITRON\04122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll.config
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ACEVISION.Common.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ISF.DEPLOIEMENT.COMMON.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\log4net.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ACEVISION.Common.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll.config
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ACEVISION.Common.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\log4net.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\bin\Debug\ACEVISION.Common.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.SAPHIRCOMDataAccess\obj\Debug\InterfaceServices.SAPHIRCOMDataAccess.pdb

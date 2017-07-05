@@ -1,0 +1,37 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Models.Role
+
+@{
+    ViewBag.Title = "Creation Profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Creation Profil</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false)
+
+    <fieldset>
+        <legend>Role</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RoleName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RoleName)
+          @*  @Html.ValidationMessageFor(model => model.RoleName)*@
+        </div>
+
+        <p>
+            <input type="submit" value="Enregistrer" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

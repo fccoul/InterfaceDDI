@@ -1,0 +1,32 @@
+﻿@model IEnumerable<INTERFACE_ITRON_SAPHIRv2CIE.Models.Role>
+@using GridMvc.Html 
+@{
+    ViewBag.Title = "DisplayAllRoles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des Profils</h2>
+
+<link href="~/Content/Gridmvc.css" rel="stylesheet"/>
+<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />
+@*<script src="~/Scripts/jquery-1.9.1.min.js"></script>*@
+<script src="~/Scripts/gridmvc.js"></script>
+ 
+<br />
+@Html.Grid(Model).Columns(columns =>
+{
+columns.Add(c => c.RoleId).Titled("Role ID");
+columns.Add(c => c.RoleName).Titled("RoleName").Filterable(true);
+}).WithPaging(10).Sortable(true)
+
+
+<div>
+
+    <a href="@Url.Action("DisplayAllUserroles")">
+     @*<img src="yourImageSource" style="vertical-align: middle; width: 30px;"> Grid View*@
+        <img src="~/Images/back.png" width="40" height="40" />
+</a>
+  
+    
+ 
+</div>

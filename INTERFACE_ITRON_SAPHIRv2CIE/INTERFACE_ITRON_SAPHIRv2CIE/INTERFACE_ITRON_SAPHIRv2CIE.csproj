@@ -1,0 +1,1115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16E38A69-8795-4E7F-90A0-BFB354A7EF4E}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INTERFACE_ITRON_SAPHIRv2CIE</RootNamespace>
+    <AssemblyName>INTERFACE_ITRON_SAPHIRv2CIE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="GridMvc">
+      <HintPath>..\packages\Grid.Mvc.3.0.0\lib\net40\GridMvc.dll</HintPath>
+    </Reference>
+    <Reference Include="ISF.DEPLOIEMENT.COMMON, Version=1.0.0.0, Culture=neutral, PublicKeyToken=08928e5b5dbb49fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\ISF.DEPLOIEMENT.COMMON.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\Administration.cs" />
+    <Compile Include="Common\Constante.cs" />
+    <Compile Include="Common\InfoSensitiveCTR.cs" />
+    <Compile Include="Common\InfoSite_ToIntegrate.cs" />
+    <Compile Include="Common\MonitoringConfig.cs" />
+    <Compile Include="Common\MyAuthorizeAttribute.cs" />
+    <Compile Include="Common\NpoiExport.cs" />
+    <Compile Include="Common\PresenterLog.cs" />
+    <Compile Include="Common\UserForm.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Content\Enumeration.cs" />
+    <Compile Include="Common\ParamsBDD.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ConnexionController.cs" />
+    <Compile Include="Controllers\EmissionController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\ParamsController.cs" />
+    <Compile Include="Controllers\ReceptionController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ConnectionDB.cs" />
+    <Compile Include="Models\DetailsDemande.cs" />
+    <Compile Include="Models\Index.cs" />
+    <Compile Include="Models\RoleModels.cs" />
+    <Compile Include="Models\RuleAdmin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ACEVISIONWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\BootStrap\bootstrap-theme.min.css" />
+    <Content Include="Content\BootStrap\bootstrap.min.css" />
+    <Content Include="Content\BootStrap\ie10-viewport-bug-workaround.css" />
+    <Content Include="Content\BootStrap\myFontAweSome.css" />
+    <Content Include="Content\BootStrap\signin.css" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\CSS\DatePicker\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\CSS\DatePicker\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Content\CSS\DatePicker\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Content\CSS\Menu\WidgetLogin.css" />
+    <Content Include="Content\dataTables\back_disabled.jpg" />
+    <Content Include="Content\dataTables\back_enabled.jpg" />
+    <Content Include="Content\dataTables\demo_page.css" />
+    <Content Include="Content\dataTables\demo_table.css" />
+    <Content Include="Content\dataTables\demo_table_jui.css" />
+    <Content Include="Content\dataTables\forward_disabled.jpg" />
+    <Content Include="Content\dataTables\forward_enabled.jpg" />
+    <Content Include="Content\dataTables\jquery.dataTables.min.css" />
+    <Content Include="Content\dataTables\other\JQ_dataTableLog.css" />
+    <Content Include="Content\Gridmvc.css" />
+    <Content Include="Content\images\back_disabled.jpg" />
+    <Content Include="Content\images\back_enabled.jpg" />
+    <Content Include="Content\images\details_close.png" />
+    <Content Include="Content\images\details_open.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\forward_disabled.jpg" />
+    <Content Include="Content\images\forward_enabled.jpg" />
+    <Content Include="Content\images\Minus.png" />
+    <Content Include="Content\images\Plus.png" />
+    <Content Include="Content\images\sort_asc.png" />
+    <Content Include="Content\images\sort_asc_disabled.png" />
+    <Content Include="Content\images\sort_both.png" />
+    <Content Include="Content\images\sort_desc.png" />
+    <Content Include="Content\images\sort_desc_disabled.png" />
+    <Content Include="Content\images\valid.jpg" />
+    <Content Include="Content\Kendo\kendo.common.min.css" />
+    <Content Include="Content\Kendo\kendo.dataviz.min.css" />
+    <Content Include="Content\Kendo\kendo.default.min.css" />
+    <Content Include="Content\Kendo\kendo.uniform.min.css" />
+    <Content Include="DLL\INOVA.ISF.DATACESS.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DLL\Ionic.Zip.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.SqlClrProvider.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.SqlEnum.dll" />
+    <Content Include="DLL\NPOI.dll" />
+    <Content Include="Images\1229279_orig.png" />
+    <Content Include="Images\add-file-256.png" />
+    <Content Include="Images\add-link-256.png" />
+    <Content Include="Images\add-user-2-xxl.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\broken-link-xxl.png" />
+    <Content Include="Images\edit-user-512.gif" />
+    <Content Include="Images\excel.png" />
+    <Content Include="Images\ExcelProteced.jpg" />
+    <Content Include="Images\Logo-cie.jpg" />
+    <Content Include="Images\print.jpg" />
+    <Content Include="Images\purchase-order-xxl.png" />
+    <Content Include="Images\Role.jpg" />
+    <Content Include="Images\Safeguarding-Policy-Icon.png" />
+    <Content Include="Images\seeDetails.png" />
+    <Content Include="Scripts\BootStrap\Administration.js" />
+    <Content Include="Scripts\BootStrap\bootstrap.js" />
+    <Content Include="Scripts\BootStrap\bootstrap.min.js" />
+    <Content Include="Scripts\BootStrap\ie-emulation-modes-warning.js" />
+    <Content Include="Scripts\BootStrap\jquery.toaster.js" />
+    <Content Include="Scripts\BootStrap\lumino.glyphs.js" />
+    <Content Include="Scripts\DataTable\Export\buttons.dataTables.min.css" />
+    <Content Include="Scripts\DataTable\Export\buttons.flash.min.js" />
+    <Content Include="Scripts\DataTable\Export\buttons.html5.min.js" />
+    <Content Include="Scripts\DataTable\Export\buttons.print.min.js" />
+    <Content Include="Scripts\DataTable\Export\dataTables.buttons.min.js" />
+    <Content Include="Scripts\DataTable\Export\JSPrint.js" />
+    <Content Include="Scripts\DataTable\Export\JSPrintOK.js" />
+    <Content Include="Scripts\DataTable\Export\JSPrintReception.js" />
+    <Content Include="Scripts\DataTable\Export\jszip.min.js" />
+    <Content Include="Scripts\DataTable\Export\pdfmake.min.js" />
+    <Content Include="Scripts\DataTable\Export\vfs_fonts.js" />
+    <Content Include="Scripts\DataTable\jquery.dataTables.min.js" />
+    <Content Include="Content\CSS\Menu\images\back.jpg" />
+    <Content Include="Content\CSS\Menu\images\border.png" />
+    <Content Include="Content\CSS\Menu\images\Home_DDI.png" />
+    <Content Include="Content\CSS\Menu\images\left.gif" />
+    <Content Include="Content\CSS\Menu\images\left.png" />
+    <Content Include="Content\CSS\Menu\images\right.gif" />
+    <Content Include="Content\CSS\Menu\images\right.png" />
+    <Content Include="Content\CSS\Menu\images\selected-left-sub.png" />
+    <Content Include="Content\CSS\Menu\images\selected-right-sub.png" />
+    <Content Include="Content\CSS\Menu\images\submenu-bottom.gif" />
+    <Content Include="Content\CSS\Menu\images\submenu-bottom.png" />
+    <Content Include="Content\CSS\Menu\images\submenu-pointer-hover.gif" />
+    <Content Include="Content\CSS\Menu\images\submenu-pointer.gif" />
+    <Content Include="Content\CSS\Menu\images\submenu-pointer.png" />
+    <Content Include="Content\CSS\Menu\images\subsubmenu-top.gif" />
+    <Content Include="Content\CSS\Menu\images\subsubmenu-top.png" />
+    <Content Include="Content\CSS\Menu\menu.css" />
+    <Content Include="Content\CSS\Progress\prelude.css" />
+    <Content Include="Content\CSS\Progress\progress.css" />
+    <Content Include="Content\CSS\Progress\rainbow.css" />
+    <Content Include="Content\images\ctr_Itron.jpg" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\loading2.gif" />
+    <Content Include="Content\images\loading3.gif" />
+    <Content Include="Content\images\LogoCIE.jpg" />
+    <Content Include="Content\images\logo_cie.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\CSS\DatePicker\images\Thumbs.db" />
+    <Content Include="Grid.mvc.readme" />
+    <None Include="Properties\PublishProfiles\dds.pubxml" />
+    <None Include="Properties\PublishProfiles\debugPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\f.pubxml" />
+    <None Include="Properties\PublishProfiles\myPublish_File.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\Calendar\jquery-ui-1.9.2.custom.js" />
+    <Content Include="Scripts\DataTable\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\DataTable\other\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTable\other\jquery.dataTables.minNew.js" />
+    <Content Include="Scripts\DataTable\other\JQ_dataTabeLog.js" />
+    <Content Include="Scripts\Gle\html5.js" />
+    <Content Include="Scripts\Gle\jquery-ui.custom.js" />
+    <Content Include="Scripts\Gle\jquery.js" />
+    <Content Include="Scripts\Gle\JSFileAdmin.js" />
+    <Content Include="Scripts\Gle\JSParams.js" />
+    <Content Include="Scripts\Gle\JS_Moulinette.js" />
+    <Content Include="Scripts\Gle\modernizr.js" />
+    <Content Include="Scripts\Gle\moment.js" />
+    <Content Include="Scripts\gridmvc.js" />
+    <Content Include="Scripts\gridmvc.lang.ru.js" />
+    <Content Include="Scripts\gridmvc.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.css" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Kendo\jquery-2.1.1.js" />
+    <Content Include="Scripts\Kendo\kendo.all.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Progress\jquery-asPieProgress.js" />
+    <Content Include="Scripts\Progress\jquery.min.js" />
+    <Content Include="Scripts\Progress\rainbow.min.js" />
+    <None Include="Service References\ACEVISIONWebService\configuration91.svcinfo" />
+    <None Include="Service References\ACEVISIONWebService\configuration.svcinfo" />
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addMeterGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addMeterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.addMeterToMeterGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.authenticateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOAbnormalConsumption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOAuth.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOChannel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOCustomerGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTODetailedMeasure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEndOfBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEndOfBillingIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEnumWebServiceReturnCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOEvent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOInstantaneous.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOInstantaneousIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOIsolationVoltage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLastPush.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLoadProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLoadProfileConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLogBook.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeasure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeasuresRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterCheckConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterStop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOMeterSummation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTONetworkDeparture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTONetworkLevel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTONetworkPost.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOObjectCreationReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOPortableTerminal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOProduction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOProductionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOProductionTypeCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOPushDecisionHelper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOPushLastRatio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOScheduler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOStatusWord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOStatusWordIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTampering.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingCoverOpening.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingCTVTRatioProgramming.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingCurrentReversal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingDayProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingIndex.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingSeason.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOTamperingUserConnections.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOVoltageQualityHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOVoltageQualitySummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOVoltageQualityTHDDefectHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOWaveform.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOWaveformIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getAbnormalConsumptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getAllLoginInformationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getAllPortableTerminalsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getChannelByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getChannelsFromLoadProfileConfigIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerGroupByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerGroupsByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomerGroupsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersByAccountNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersByNameFilterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getCustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getDetailedEventsByLoadProfileConfigIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getDetailedMeasuresByChannelIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEOBByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEOBByMeterIdDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEOBIDsByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEOBIDsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEOBsByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEOBsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getEventsByLoadProfileConfigIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getInstantaneousByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getInstantaneousIdsByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getIsolationVoltageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLastPushResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLoadProfileConfigsByLoadProfileIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLoadProfileMeasuresSuperMethodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLoadProfilesByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLogBooksByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLogBooksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getLoginInformationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeasuresByChannelIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterGroupByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterGroupsByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterGroupsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByCityIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByCityNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByConnectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByCustomerIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByCustomerNameFilterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByCustomerNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByIPMaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByNetworkDepartureIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByNetworkDepartureNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByNetworkPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersByNetworkPostNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersBySerialNumberFilterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersBySerialNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMetersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationsByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getNetworkDepartureByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getNetworkLevelsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getNetworkPostAscendantsByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getNetworkPostByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getNetworkPostDescendantsByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getNetworkPostsByLevelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getPersoEOBByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getPersoInstantaneousByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getProductionByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getProductionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getProductionTypeByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getProductionTypeCategoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getProductionTypeCategoryByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getProductionTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getPushDecisionHelperResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getPushLastRatioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportCheckConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportCheckEnergyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportMeterStopResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportMonitorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportTamperingCoverOpeningResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportTamperingMagnetSensorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getReportTamperingPhaseCutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getSchedulerByMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getSchedulerByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getSchedulerByMeterIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getSchedulerByTryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getSchedulerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getStatusWordByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getStatusWordIdsByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingCoverOpeningByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingDayProfileByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingIndexByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingMeterHistoryByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingSeasonByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getVoltageQualityHistoryByMeterIdTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getVoltageQualitySummaryByMeterIdTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getWaveformByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getWaveformIdsByMeterIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.setReScheduleTasksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateCustomerAccountNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateMeterAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateMeterCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateMeterLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateMeterPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateMeterPortableTerminalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateMeterToMeterGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.ChangeMeterGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.DTOValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationsByCriteriaNetworkDepartureIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationsByCriteriaNetworkDepartureNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationsByCriteriaNetworkPostIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterSummationsByCriteriaNetworkPostNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingCTVTRatioProgrammingByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingCurrentReversalByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTamperingUserConnectionsByTamperingIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getTransformersByInstantaneousIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getVoltageQualityTHDDefectHistoryByMeterIdTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.getMeterGroupsBySerialNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ACEVISIONWebService\INTERFACE_ITRON_SAPHIRv2CIE.ACEVISIONWebService.updateCustomerNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ACEVISIONWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="packages.config" />
+    <None Include="readme.txt" />
+    <Content Include="Views\Params\GetServerInfo.cshtml" />
+    <Content Include="Views\Reception\Index.cshtml" />
+    <Content Include="Views\Reception\CTR_ACEVSISION.cshtml" />
+    <Content Include="Views\Reception\CTR_ACEVSISIONTest.cshtml" />
+    <Content Include="Views\Emission\Index_.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Home\test2.cshtml" />
+    <Content Include="Views\Reception\getDats_FromEOBilling_ACEVISIOn_Detail.cshtml" />
+    <Content Include="Views\Log\LogReception.cshtml" />
+    <Content Include="Views\Log\Ecart.cshtml" />
+    <Content Include="Views\Log\TestLog.cshtml" />
+    <Content Include="Views\Params\Index.cshtml" />
+    <None Include="Service References\ACEVISIONWebService\ServiceExposition.wsdl" />
+    <Content Include="Views\Emission\Index.cshtml" />
+    <Content Include="Views\Emission\getDemandes_FromType_SAPHIR_Detail.cshtml" />
+    <Content Include="Views\Log\LogEmission.cshtml" />
+    <Content Include="Views\Connexion\Connecter.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\RoleCreate.cshtml" />
+    <Content Include="Views\Account\DisplayAllRoles.cshtml" />
+    <Content Include="Views\Shared\_GridPager.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
+    <Content Include="Views\Account\RoleAddToUser.cshtml" />
+    <Content Include="Views\Account\DisplayAllUserroles.cshtml" />
+    <Content Include="Views\Account\RemoveRoleAddedToUser.cshtml" />
+    <Content Include="Views\Account\DisplayAllUsers.cshtml" />
+    <Content Include="Views\Account\EditAccount.cshtml" />
+    <Content Include="Views\Params\IndexFile.cshtml" />
+    <Content Include="Views\Home\Settings.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Home\ErrorDisplay.cshtml" />
+    <Content Include="Views\Account\DisplayInfosSite.cshtml" />
+    <Content Include="Views\Account\ContentSite.cshtml" />
+    <Content Include="Views\Log\LogIntegration.cshtml" />
+    <Content Include="Views\Params\ManageFile.cshtml" />
+    <Content Include="Views\Log\LogIntegrationCtr.cshtml" />
+    <Content Include="Views\Emission\DisplayRequestSucces.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Views\Account\UploadedExcel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACEVISION.Common\ACEVISION.Common.csproj">
+      <Project>{946cc9e5-ba41-470a-baba-59fd2f3ffacc}</Project>
+      <Name>ACEVISION.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACEVISION.ProcessUI\ACEVISION.ProcessUI.csproj">
+      <Project>{ed301302-b1a4-4d13-827f-92e0bf551439}</Project>
+      <Name>ACEVISION.ProcessUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceServices.DTO\InterfaceServices.DTO.csproj">
+      <Project>{e3bbb321-fb11-4802-bcf0-41984a01048b}</Project>
+      <Name>InterfaceServices.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ACEVISIONWebService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>36635</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15749/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

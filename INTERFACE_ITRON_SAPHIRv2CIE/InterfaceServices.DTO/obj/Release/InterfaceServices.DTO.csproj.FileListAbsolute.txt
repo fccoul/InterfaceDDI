@@ -1,0 +1,8 @@
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Release\InterfaceServices.DTO.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Release\InterfaceServices.DTO.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Release\InterfaceServices.DTO.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Release\InterfaceServices.DTO.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Release\InterfaceServices.DTO.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\bin\Release\InterfaceServices.DTO.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Release\InterfaceServices.DTO.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\InterfaceServices.DTO\obj\Release\InterfaceServices.DTO.pdb

@@ -1,0 +1,64 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Models.LocalSettingModel
+
+@{
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mon Compte...</h2>
+<hr />
+<p class="message-success">@ViewBag.StatusMessage</p>
+
+@using (Html.BeginForm()) {    
+     @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>LocalSettingModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OldPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OldPassword)
+            @Html.ValidationMessageFor(model => model.OldPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NewPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NewPassword)
+            @Html.ValidationMessageFor(model => model.NewPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ConfirmPassword)
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @*@Html.TextBox("lblRole",(string)@ViewBag.Role)*@
+            @*@Html.EditorFor(model => model.Email)*@
+           @* @{Model.Email = ViewBag.Email;}*@
+            @Html.EditorFor(model => model.Email)
+     @*       @Html.TextBox("txtEmail",(string)@ViewBag.Email)*@
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <br />
+        <p>
+            <input type="submit" value="Enregistrer" />
+        </p>
+    </fieldset>
+}
+
+ 
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

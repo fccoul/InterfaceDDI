@@ -1,0 +1,55 @@
+﻿@model INTERFACE_ITRON_SAPHIRv2CIE.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hgroup class="title">
+   @* <h1>@ViewBag.Title.</h1>*@
+    <h2>Creation Compte Utilisateur</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.Label("Login")
+                @Html.TextBoxFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.Label("Mot de passe")
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.Label("Confirmation du Mot de passe")
+                @Html.PasswordFor(m => m.ConfirmPassword)
+            </li>
+
+            <li>
+                @Html.Label("Adresse Electronique")
+                @Html.TextBoxFor(m => m.EmailID)
+            </li>   
+        </ol>
+        <input type="submit" value="Enregistrer" />
+    </fieldset>
+}
+
+<div>
+
+    <a href="@Url.Action("DisplayAllUsers")">
+     @*<img src="yourImageSource" style="vertical-align: middle; width: 30px;"> Grid View*@
+        <img src="~/Images/back.png" width="40" height="40" />
+</a>
+  
+    
+ 
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

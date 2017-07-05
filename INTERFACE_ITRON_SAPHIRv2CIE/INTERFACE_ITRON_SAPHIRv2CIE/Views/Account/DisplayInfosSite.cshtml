@@ -1,0 +1,137 @@
+﻿@model IEnumerable<INTERFACE_ITRON_SAPHIRv2CIE.Common.InfoSite_ToIntegrate>
+
+@{
+    ViewBag.Title = "DisplayInfosSite";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    <link href="~/Content/dataTables/other/JQ_dataTableLog.css" rel="stylesheet" />
+    
+}
+
+@section scripts
+{
+    @*<script src="~/Scripts/DataTable/other/JQ_dataTabeLog.js"></script>*@
+    <script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+}
+
+<h2>Informations sur le site à Intégrer</h2>
+<link href="~/Content/Gridmvc.css" rel="stylesheet"/>
+@*<link href="~/Content/BootStrap/bootstrap.min.css" rel="stylesheet" />*@
+@*<link href="~/Content/BootStrap/myFontAweSome.css" rel="stylesheet" />*@
+ <style>
+  .submit-progress-bg {
+    background-color: lightgray;
+    opacity: .5;
+  }
+.submit-progress {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 6em;
+  padding-top: 2.3em;
+  /* The following rules are the
+     ones most likely to change */
+  width: 20em;
+  /* Set 'margin-left' to a negative number
+     that is 1/2 of 'width' */
+  margin-left: -10em;
+  padding-left: 2.1em;
+  background-color:#2391b0;
+  color: white;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em;
+  box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+  -moz-box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+}
+.submit-progress i {
+  margin-right: 0.5em;
+}
+</style>
+
+<!--kendo-->
+<link href="~/Content/Kendo/kendo.common.min.css" rel="stylesheet" />
+@*<link href="~/Content/Kendo/kendo.dataviz.min.css" rel="stylesheet" />*@
+<link href="~/Content/Kendo/kendo.default.min.css" rel="stylesheet" />
+@*<link href="~/Content/Kendo/kendo.uniform.min.css" rel="stylesheet" />*@
+
+@using (Html.BeginForm("DisplayContent","Account",
+                        FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+    <div id="fileUpload">
+        <table style="border:none"><tr>
+            <td>
+                   Veuillez selectionnez le fichier à Intégrer <input type="file" id="file" name="file"/>
+            </td>
+            <td><br /><input type="submit" id="btnAfficher" value="Afficher" style="margin:0px 30px"  onclick="return DisplayProgressMessage('this', 'msg')" /> </td>
+                             </tr></table>
+
+    
+    </div>
+    <div id="iDViewBag"> <i style="color:red">@ViewBag.Message</i> </div>
+}
+<div class="submit-progress hidden">
+    <i class="fa fa-refresh fa-spin"></i>
+ <label>Chargement en cours...</label>
+</div>
+
+<br />
+@if(Model.Count()>0)
+{
+<div id="divBtnIntegrate">
+ <input type="button" id="btnImport" value="Importer dans ACE VISION" /> 
+ 
+</div>
+}
+<br />
+<div id="succesPartial">
+    <table style="border:none"><tr>
+        <td> <img src="~/Content/images/valid.jpg" width="30" height="30" /></td>
+        <td><h4 style="margin:0 10px"><i style="color:green">Visualiser <a href="#" onclick="DisplayItemsInserted()" data-toggle="modal" data-target="#myModal" role="button">les lignes enregistrées</a></i></h4>
+        </td>
+     </tr></table>
+   
+</div>
+<div id="ResultUpload">    
+    <i style="color:#0094ff"></i>
+</div> 
+<div id="loading" style="vertical-align:middle;">        
+            <i style="color:#2391b0">Traitement en cours , cette opération peut nécessiter plusieurs minutes , veuillez patienter...</i>
+   @* <i class="fa fa-refresh fa-spin"></i>*@
+      <img src="~/Content/images/loading3.gif" width="80" height="100" alt="Patientez svp..."/>     
+ </div>
+
+<div id="divContent">
+ @{Html.RenderPartial("ContentSite");}
+    </div>
+
+<div   id="myModal" class="modal fade" role="dialog" tabindex="-1" >
+   <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                 <h2>Intégration réussie...</h2>
+              </div>
+              <div id="idTable" class="modal-body">
+              @*     <table id="tableResult">                      
+                          <tr> 
+                              <th>Client</th>
+                              <th>Identifiant</th>
+                              <th>N° Compteur</th>
+                          </tr>                       
+                   </table>*@
+                  <div id="GridResult"></div>
+              </div>
+              <div class="modal-footer">      
+              </div>
+            </div>
+       </div>
+</div>
+
+<script src="~/Scripts/Gle/JS_Moulinette.js"></script>
+<script src="~/Scripts/gridmvc.min.js"></script>
+
+<script src="~/Scripts/Kendo/kendo.all.min.js"></script>

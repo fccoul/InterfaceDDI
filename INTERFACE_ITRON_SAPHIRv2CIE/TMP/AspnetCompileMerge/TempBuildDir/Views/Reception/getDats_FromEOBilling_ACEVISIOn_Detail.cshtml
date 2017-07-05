@@ -1,0 +1,102 @@
+﻿@model IEnumerable<INTERFACE_ITRON_SAPHIRv2CIE.Models.Index>
+
+@{
+    Layout = null;
+}
+
+ 
+    <table cellpadding="4" cellspacing="0" border="0" style="padding-left:50px;">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexNuit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexPointe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexJour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexHoraire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexReactif1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexReactif2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexReactif3)
+            </th>
+
+            <tr>
+            <td> 
+               @Model.FirstOrDefault().IndexNuit
+            </td>
+            <td>
+                 @Model.FirstOrDefault().IndexPointe
+            </td>
+            <td>
+                 @Model.FirstOrDefault().IndexJour
+            </td>
+            <td>
+                 @Model.FirstOrDefault().IndexHoraire
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexReactif1
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexReactif2
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexReactif3
+            </td>
+
+      </table>
+
+      <table cellpadding="4" cellspacing="0" border="0" style="padding-left:50px;">
+          <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexIma1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexIma2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexIma3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexConsoMonop1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexConsoMonop2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexConsoMonop3)
+            </th>
+          </tr>
+        <tr>      
+            <td>
+                @Model.FirstOrDefault().IndexIma1
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexIma2
+            </td>
+            <td>
+                 @Model.FirstOrDefault().IndexIma3
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexConsoMonop1
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexConsoMonop2
+            </td>
+            <td>
+                @Model.FirstOrDefault().IndexConsoMonop3
+            </td>
+            
+        </tr>
+    
+    
+    </table>
+ 

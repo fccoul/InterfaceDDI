@@ -1,0 +1,44 @@
+﻿@model IEnumerable<INTERFACE_ITRON_SAPHIRv2CIE.Models.DetailsDemande>
+
+@{
+    Layout = null;
+}
+ 
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("Ancien Raccordement")
+        </th>
+        <th>
+            @Html.DisplayName("Ancien Identifiant Abonne")
+        </th>
+        <th>
+            @Html.DisplayName("Ancien N° Compteur")
+        </th>
+        <th>
+            @Html.DisplayName("Adresse")
+        </th>
+     
+    </tr>
+@if(Model !=null)
+{
+  foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OLD_ReferenceRaccordement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OLD_IdentifiantAbonne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OLD_NumeroCompteur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+     
+    </tr>
+}
+}
+</table>

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1EF7D80-48E3-4292-971E-3B0C8A2FE94A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Console_ITRON_SAPHIRv2CIE_EMISSION</RootNamespace>
+    <AssemblyName>Console_ITRON_SAPHIRv2CIE_EMISSION</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="INOVA.ISF.DATACESS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869499e6a6c61972, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Console_ITRON_SAPHIRv2CIE\bin\Debug\INOVA.ISF.DATACESS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ISF.DEPLOIEMENT.COMMON">
+      <HintPath>..\INTERFACE_ITRON_SAPHIRv2CIE\DLL\ISF.DEPLOIEMENT.COMMON.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Console_ITRON_SAPHIRv2CIE\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constante.cs" />
+    <Compile Include="InfoSensitiveCTR.cs" />
+    <Compile Include="Presenter.cs" />
+    <Compile Include="PresenterService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SceReference_Itron\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOAbnormalConsumption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOAuth.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOChannel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOCustomerGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTODetailedMeasure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOEndOfBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOEndOfBillingIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOEnumWebServiceReturnCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOEvent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOInstantaneous.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOInstantaneousIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOIsolationVoltage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOLastPush.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOLoadProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOLoadProfileConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOLogBook.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeasure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeasuresRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeterCheckConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeterGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeterHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeterIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeterStop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOMeterSummation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTONetworkDeparture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTONetworkLevel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTONetworkPost.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOObjectCreationReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOPortableTerminal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOProduction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOProductionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOProductionTypeCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOPushDecisionHelper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOPushLastRatio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOScheduler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOStatusWord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOStatusWordIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTampering.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingCoverOpening.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingCTVTRatioProgramming.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingCurrentReversal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingDayProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingIndex.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingSeason.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOTamperingUserConnections.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOVoltageQualityHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOVoltageQualitySummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOVoltageQualityTHDDefectHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOWaveform.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\Console_ITRON_SAPHIRv2CIE_EMISSION.SceReference_Itron.DTOWaveformIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SceReference_Itron\ServiceExposition.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SceReference_Itron\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SceReference_Itron\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SceReference_Itron\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SceReference_Itron\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SceReference_Itron\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACEVISION.Common\ACEVISION.Common.csproj">
+      <Project>{946cc9e5-ba41-470a-baba-59fd2f3ffacc}</Project>
+      <Name>ACEVISION.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACEVISION.ProcessUI\ACEVISION.ProcessUI.csproj">
+      <Project>{ed301302-b1a4-4d13-827f-92e0bf551439}</Project>
+      <Name>ACEVISION.ProcessUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceServices.BusinessRules\InterfaceServices.BusinessRules.csproj">
+      <Project>{ced7963b-d875-4bd8-bb06-3268b4fe0bee}</Project>
+      <Name>InterfaceServices.BusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceServices.DTO\InterfaceServices.DTO.csproj">
+      <Project>{e3bbb321-fb11-4802-bcf0-41984a01048b}</Project>
+      <Name>InterfaceServices.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceServices.SAPHIRCOMDataAccess\InterfaceServices.SAPHIRCOMDataAccess.csproj">
+      <Project>{170cd15b-7e58-4784-b94c-de7582bae84a}</Project>
+      <Name>InterfaceServices.SAPHIRCOMDataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

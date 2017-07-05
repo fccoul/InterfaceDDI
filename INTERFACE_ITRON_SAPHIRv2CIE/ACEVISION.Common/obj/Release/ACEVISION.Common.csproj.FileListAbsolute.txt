@@ -1,0 +1,12 @@
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\ACEVISION.Common.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\ACEVISION.Common.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\ISF.DEPLOIEMENT.COMMON.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\log4net.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Release\ACEVISION.Common.dll
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Release\ACEVISION.Common.pdb
+C:\Users\FHCOULIBALY\documents\visual studio 2012\Projects\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\INOVA.ISF.DATACESS.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\ACEVISION.Common.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\bin\Release\ACEVISION.Common.pdb
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Release\ACEVISION.Common.csprojResolveAssemblyReference.cache
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Release\ACEVISION.Common.dll
+E:\Application\ITRON\24122015\INTERFACE_ITRON_SAPHIRv2CIE\ACEVISION.Common\obj\Release\ACEVISION.Common.pdb

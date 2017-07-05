@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "ErrorDisplay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ 
+
+<hgroup class="title">
+    <h1 class="error">Erreur !</h1>
+    @if(ViewBag.FileExcel==null)
+    {
+    <h3 class="error">une erreur s'est produite lors du traitement de votre demande</h3>
+        <h4>Veuillez contactez votre administrateur ! </h4>
+    }
+    else
+    {
+         <h3 class="error">Le Fichier des compteurs HT est n'est pas configuré sur le serveur </h3>
+        <h4>Contactez votre administrateur , pour  le paramétrer avant execution de cette demande ! </h4>
+    }
+</hgroup>
